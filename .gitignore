@@ -1,0 +1,5 @@
+# fish: Ignore variables and fisher functions
+fish_variables
+fisher.fish
+nvm.fish
+
