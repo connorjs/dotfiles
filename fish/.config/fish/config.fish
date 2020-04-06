@@ -18,9 +18,15 @@ abbr -a .... 'pushd ../../../'
 abbr -a ..... 'pushd ../../../../'
 # Stop at four (ex: package in one workspace to somewhere else)
 
+# Vim
+abbr -a n 'nvim'
+abbr -a v 'nvim'
+abbr -a vim 'nvim' # Accept muscle memory
+set -gx VISUAL nvim
+set -gx EDITOR $VISUAL
+
 # Other
 abbr -a ssh 'ssh -2'
-abbr -a v 'vim'
 
 # git (last b/c so long)
 abbr -a g 'git'
@@ -33,7 +39,7 @@ function gbda
 end
 abbr -a gc 'git commit -v'
 abbr -a gca 'git commit -v -a'
-abbr -a gcaa 'git commit -a --amend'
+abbr -a gcaa 'git commit -v -a --amend'
 abbr -a gcam 'git commit -a -m'
 abbr -a gcan! 'git commit -a --amend --no-edit'
 abbr -a gcm 'git checkout master'
