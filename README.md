@@ -15,6 +15,7 @@ If you have tips/tricks/etc, I'd love to hear them! Cheers
 - 📜️Single install script
 - 📦Brew for package manager
 - 🐟fish shell
+- 🔌 vim-plug
 
 ## Install
 
@@ -27,7 +28,7 @@ If you have tips/tricks/etc, I'd love to hear them! Cheers
 - [X] Single install script
 - [ ] Document (educational, for memory)
 - [ ] App settings (e.g. VS Code extensions)
-- [ ] Source "local" file (allow private config)
+- [X] Source "local" file (allow private config) → `~/local.fish`
 
 ## Links
 
@@ -47,3 +48,4 @@ Here's a link dump in no order from my initial configuration.
 - <http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html?round=two>
 - <https://git.io/fish-nvm>
 - <https://www.sean.sh/log/when-an-alias-should-actually-be-an-abbr/>
+- <https://github.com/junegunn/vim-plug>
