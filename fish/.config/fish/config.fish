@@ -1,4 +1,8 @@
+# Remove greeting
 set fish_greeting
+
+# Path
+set -g fish_user_paths /usr/local/sbin $HOME/bin $fish_user_paths
 
 # iTerm integration
 source ~/.iterm2_shell_integration.fish
@@ -15,6 +19,7 @@ abbr -a ..... 'pushd ../../../../'
 # Stop at four (ex: package in one workspace to somewhere else)
 
 # Other
+abbr -a ssh 'ssh -2'
 abbr -a v 'vim'
 
 # git (last b/c so long)
@@ -53,4 +58,8 @@ abbr -a grba 'git rebase --abort'
 abbr -a grbc 'git rebase --continue'
 abbr -a grbs 'git rebase --skip'
 abbr -a gs 'git status'
+
+if test -e ~/local.fish
+  source ~/local.fish
+end
 
