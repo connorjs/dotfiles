@@ -15,7 +15,7 @@ If you have tips/tricks/etc, I'd love to hear them! Cheers
 - 📜️Single install script
 - 📦Brew for package manager
 - 🐟fish shell
-- 🔌 vim-plug
+- 🔌 vim-plug (and neovim)
 
 ## Install
 
@@ -34,6 +34,7 @@ If you have tips/tricks/etc, I'd love to hear them! Cheers
 
 Here's a link dump in no order from my initial configuration.
 
+- <http://redsymbol.net/articles/unofficial-bash-strict-mode/>
 - <https://github.com/webpro/awesome-dotfiles>
 - <https://github.com/jorgebucaran/awesome-fish>
 - <https://github.com/mathiasbynens/dotfiles>
@@ -49,3 +50,5 @@ Here's a link dump in no order from my initial configuration.
 - <https://git.io/fish-nvm>
 - <https://www.sean.sh/log/when-an-alias-should-actually-be-an-abbr/>
 - <https://github.com/junegunn/vim-plug>
+- <https://neovim.io/>
+

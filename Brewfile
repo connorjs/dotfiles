@@ -1,9 +1,11 @@
 # Binaries
+tap "linuxbrew/xorg" if OS.linux?
 brew "fish"
 brew "git"
 brew "jq"
 brew "bat"
 brew "tree"
+brew "nvim"
 brew "python@3.8"
 brew "wget"
 brew "docker"
@@ -12,8 +14,8 @@ brew "imagemagick"
 brew "coreutils"
 brew "cowsay"
 brew "lolcat"
-brew "mas"
 brew "stow"
+brew "mas" if OS.mac?
 
 # https://github.com/corretto/corretto-8/issues/42
 tap "homebrew/cask-versions"
@@ -21,8 +23,8 @@ cask "corretto8"
 cask "corretto"
 
 # Fonts
-tap "homebrew/cask-fonts"
-cask  "font-jetbrainsmono-nerd-font", args: { fontdir: "/Library/Fonts" }
+tap "homebrew/cask-fonts" if OS.mac?
+cask "font-jetbrainsmono-nerd-font", args: { fontdir: "/Library/Fonts" }
 
 # macOS apps
 cask_args appdir: "/Applications"

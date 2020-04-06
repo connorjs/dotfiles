@@ -3,3 +3,6 @@ fish_variables
 fisher.fish
 nvm.fish
 
+# Ignore vim plugins
+vim/.config/nvim/autoload
+

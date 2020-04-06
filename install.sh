@@ -75,6 +75,11 @@ if [[ ! $(echo $SHELL) == $(which fish) ]]; then
   chsh -s $(which fish)
 fi
 
+# Shell integration + fish
+if [ ! -f "$HOME/.iterm2_shell_integration.fish" ]; then
+  curl -L https://iterm2.com/shell_integration/fish -o "$HOME/.iterm2_shell_integration.fish"
+fi
+
 # Finish in fish
 fish -c '
 
