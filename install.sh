@@ -7,6 +7,7 @@ IFS=$'\t\n'
 # 2. OS-specific
 # 3. Symlinking
 # 4. Shell
+# 5. Other
 
 ################
 # 0. Pre-steps #
@@ -123,6 +124,21 @@ set -U fish_pager_color_progress brwhite --background=cyan
 '
 
 myecho '4️⃣' 'Shell configured 🐟\n'
+
+############
+# 5. Other #
+############
+
+myecho '5️⃣' 'Installing AWS CLI'
+
+mkdir -p /tmp/awscli
+if command -v foo >/dev/null 2>&1; then
+  curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o /tmp/awscli/awscliv2.zip
+  unzip /tmp/awscli/awscliv2.zip -d /tmp/awscli
+  sudo /tmp/awscli/aws/install
+  rm -rf /tmp/awscli
+fi
+myecho '5️⃣' 'AWS CLI installed\n'
 
 ##############
 # N. Cleanup #
