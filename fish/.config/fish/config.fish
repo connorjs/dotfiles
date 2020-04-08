@@ -7,11 +7,21 @@ set -g fish_user_paths /usr/local/sbin $HOME/bin $fish_user_paths
 # iTerm integration
 source ~/.iterm2_shell_integration.fish
 function iterm2_print_user_vars
+  # Left: \(user.logo) | Current directory | git state
+  # Right: Node: \(user.node) | Clock
   iterm2_set_user_var node (node -v)
+  switch (uname)
+    case Darwin
+      iterm2_set_user_var logo \uf302 # 
+    case Linux
+      iterm2_set_user_var logo \uf31a # 
+    case '*'
+      iterm2_set_user_var logo \uf29c # 
+  end
 end
 
 # CLI
-abbr -a cd 'pushd'
+abbr -a d 'pushd'
 abbr -a .. 'pushd ../'
 abbr -a ... 'pushd ../../'
 abbr -a .... 'pushd ../../../'
