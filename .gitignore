@@ -6,3 +6,4 @@ nvm.fish
 # Ignore vim plugins
 vim/.config/nvim/autoload
 
+vim/.config/nvim/.netrwhist

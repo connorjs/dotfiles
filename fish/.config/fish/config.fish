@@ -1,15 +1,9 @@
-# Remove greeting
-set fish_greeting
-
-# Path
-set -g fish_user_paths /usr/local/sbin $HOME/bin $fish_user_paths
-
 # iTerm integration
 source ~/.iterm2_shell_integration.fish
 function iterm2_print_user_vars
   # Left: \(user.logo) | Current directory | git state
   # Right: Node: \(user.node) | Clock
-  iterm2_set_user_var node (node -v)
+  iterm2_set_user_var node (type -f node >/dev/null 2>&1 && node -v)
   switch (uname)
     case Darwin
       iterm2_set_user_var logo \uf302 # 
@@ -22,21 +16,16 @@ end
 
 # CLI
 abbr -a d 'pushd'
-abbr -a .. 'pushd ../'
-abbr -a ... 'pushd ../../'
-abbr -a .... 'pushd ../../../'
-abbr -a ..... 'pushd ../../../../'
-# Stop at four (ex: package in one workspace to somewhere else)
+abbr -a cd 'pushd'
 
 # Vim
-abbr -a n 'nvim'
 abbr -a v 'nvim'
-abbr -a vim 'nvim' # Accept muscle memory
 set -gx VISUAL nvim
 set -gx EDITOR $VISUAL
 
 # Other
 abbr -a ssh 'ssh -2'
+abbr -a t 'tree -CL 1'
 
 # git (last b/c so long)
 abbr -a g 'git'
@@ -52,7 +41,7 @@ abbr -a gca 'git commit -v -a'
 abbr -a gcaa 'git commit -v -a --amend'
 abbr -a gcam 'git commit -a -m'
 abbr -a gcan! 'git commit -a --amend --no-edit'
-abbr -a gcm 'git checkout master'
+abbr -a gcm 'git checkout mainline'
 abbr -a gco 'git checkout'
 abbr -a gcob 'git checkout -b'
 abbr -a gcp 'git cherry-pick'
@@ -63,15 +52,16 @@ abbr -a gd 'git diff'
 abbr -a gd 'git diff'
 abbr -a gd 'git diff'
 abbr -a gf 'git fetch'
-abbr -a gl 'git log --decorate --graph'
+abbr -a gl 'git pull'
+abbr -a glm 'git log HEAD...mainline'
 abbr -a glo 'git log --decorate --graph --oneline'
 abbr -a gls 'git log --decorate --graph --stat'
-abbr -a glo 'git log --oneline --decorate --graph'
 abbr -a gm 'git merge'
-abbr -a gp 'git pull'
+abbr -a gp 'git push'
 abbr -a grb 'git rebase'
 abbr -a grba 'git rebase --abort'
 abbr -a grbc 'git rebase --continue'
+abbr -a grbi 'git rebase -i'
 abbr -a grbs 'git rebase --skip'
 abbr -a gs 'git status'
 

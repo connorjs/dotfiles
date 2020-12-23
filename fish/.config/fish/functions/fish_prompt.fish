@@ -1,3 +1,4 @@
 function fish_prompt
-   echo ' ❯ '
+  echo
+  echo ' ❯ '
 end

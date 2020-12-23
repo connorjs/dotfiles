@@ -92,6 +92,9 @@ end
 # Run fisher (install functions)
 fisher
 
+# Path
+set -U fish_user_paths /usr/local/sbin $HOME/bin
+
 # Function-specific install
 nvm # loads node
 
@@ -131,8 +134,8 @@ myecho '4️⃣' 'Shell configured 🐟\n'
 
 myecho '5️⃣' 'Installing AWS CLI'
 
-mkdir -p /tmp/awscli
 if command -v foo >/dev/null 2>&1; then
+  mkdir -p /tmp/awscli
   curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o /tmp/awscli/awscliv2.zip
   unzip /tmp/awscli/awscliv2.zip -d /tmp/awscli
   sudo /tmp/awscli/aws/install
