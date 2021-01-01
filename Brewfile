@@ -24,14 +24,13 @@ cask "corretto"
 
 # Fonts
 tap "homebrew/cask-fonts" if OS.mac?
-cask "font-jetbrainsmono-nerd-font", args: { fontdir: "/Library/Fonts" }
+cask "font-jetbrains-mono-nerd-font", args: { fontdir: "/Library/Fonts" }
 
 # macOS apps
 cask_args appdir: "/Applications"
 cask "1password"
 cask "alfred"
 cask "amazon-chime"
-cask "amazon-music"
 cask "amazon-photos"
 cask "authy"
 cask "docker"
@@ -47,13 +46,14 @@ cask "microsoft-edge"
 #cask "microsoft-word"
 cask "opera"
 cask "quip"
-cask "rocket" # Settings: % as trigger
+cask "rocket" # Settings: :: as trigger
 cask "setapp"
 cask "sketch"
 cask "sketchpacks"
+cask "spotify"
 cask "visual-studio-code"
 cask "xpra"
 
 # macOS App Store
-mas "Clocker", id: 1056643111
 mas "Magnet", id: 441258766
+mas "Endel", id: 1484348796

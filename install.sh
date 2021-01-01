@@ -98,6 +98,8 @@ set -U fish_user_paths /usr/local/sbin $HOME/bin
 # Function-specific install
 nvm # loads node
 
+set -Ux BAT_THEME 'Solarized (light)'
+
 # Solarized Light (same using UI via `fish_config`)
 set -U fish_color_normal normal
 set -U fish_color_command 586e75
