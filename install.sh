@@ -47,7 +47,9 @@ myecho '1️⃣' 'Packages installed 📦\n'
 myecho '2️⃣' 'Running OS-specific setup...'
 
 # Execute all `*.sh` scripts in OS-specific (as returned by `uname`) directory
-find "${DOTFILES_DIR}/$(uname)" -type f -name '*.sh' -exec {} \;
+if [ -d "${DOTFILES_DIR}/$(uname)" ]; then
+  find "${DOTFILES_DIR}/$(uname)" -type f -name '*.sh' -exec {} \;
+fi
 
 myecho '2️⃣' 'OS-specific setup ran 🏃‍♂️\n'
 
@@ -98,7 +100,7 @@ set -U fish_user_paths /usr/local/sbin $HOME/bin
 # Function-specific install
 nvm # loads node
 
-set -Ux BAT_THEME 'Solarized (light)'
+set -Ux BAT_THEME 'Solarized \(light\)'
 
 # Solarized Light (same using UI via `fish_config`)
 set -U fish_color_normal normal

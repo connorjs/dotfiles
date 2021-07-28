@@ -4,6 +4,7 @@ fisher.fish
 nvm.fish
 fish/.config/fish/fish_plugins
 fish/.config/fish/functions/_nvm*
+fish/.config/fish/completions
 
 # Ignore vim plugins
 vim/.config/nvim/autoload
