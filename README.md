@@ -1,4 +1,4 @@
-# Connor's dotfiles
+# Connor’s dotfiles
 
 > [!IMPORTANT]
 >
@@ -14,7 +14,7 @@
 Welcome to my dotfiles repo! In this repo you will find my public configurations
 including an install script.
 
-If you have tips/tricks/etc, I'd love to hear them! Cheers
+If you have tips/tricks/etc, I’d love to hear them! Cheers
 
 ## TL;DR
 
@@ -39,68 +39,53 @@ cd dotfiles
 
 ## File system
 
-- `$HOME/.config`: XDG config pattern. I prefer to use this where possible.
+### XDG config
 
-  The install script uses `stow` to link this repositories packages. For
-  example, `.vimrc` ends up in `$HOME` and the `init.vim` script ends up in
-  `$HOME/.config/nvim` as expected. Also see [“Using GNU Stow to manage your
-  dotfiles”][stow-blog-post].
+`$HOME/.config`: I prefer to use the XDG config pattern where possible.
 
-  _The package names in this repository exist as preferred logical naming. Only
-  this install script uses them; they do not appear in the target file system._
+The install script uses `stow` to link this repositories packages. For example,
+`.vimrc` ends up in `$HOME` and the `init.vim` script ends up in
+`$HOME/.config/nvim` as expected. Also see [“Using GNU Stow to manage your
+dotfiles”][stow-blog-post].
 
-- `$HOME/w`: Workspaces for code repositories. I name it `w` for brevity. If
-  needed, create `w` on the appropriate drive and symlink to it from `$HOME`.
+_The package names in this repository exist as preferred logical naming. Only
+this install script uses them; they do not appear in the target file system._
 
-  Namespacing: Regardless of tooling, I see namespacing for code repositories.
-  GitHub has the user or organization, AWS has the account, and Azure DevOps has
-  the project.
+### Workspaces
 
-  I match this namespacing with the first-level directory structure under `w`.
-  For example, this repository will exist at `$HOME/w/connorjs/dotfiles`.
+`$HOME/w`: Workspaces for code repositories. I name it `w` for brevity. If
+needed, create `w` on the appropriate drive and symlink to it from `$HOME`.
 
-  _Note: I have considered having separate workspaces or another directory per
-  tool. For example, `~/gh` or `~/w/gh` for GitHub. However, I have yet to hit
-  conflicts that warrant this additional namespace scheme._
+Namespacing: Regardless of tooling, I see namespacing for code repositories.
+GitHub has the user or organization, AWS has the account, and Azure DevOps has
+the project.
+
+I match this namespacing with the first-level directory structure under `w`.
+For example, this repository will exist at `$HOME/w/connorjs/dotfiles`.
+
+_Note: I have considered having separate workspaces or another directory per
+tool. For example, `~/gh` or `~/w/gh` for GitHub. However, I have yet to hit
+conflicts that warrant this additional namespace scheme._
 
 ## Utilities
 
 [Homebrew] installs the following utilities (listed alphabetically).
 
-| Name          | Description/ reason                    |
-|---------------|----------------------------------------|
-| [bat]         | Cat clone with wings                   |
-| coreutils     | _Ensure latest version_                |
-| [cowsay]      | _For fun_                              |
-| [fish]        | Fish shell                             |
-| git           | _Ensure latest version_                |
+|     Name      | Description/reason                     |
+|:-------------:|:---------------------------------------|
+|     [bat]     | Cat clone with wings                   |
+|   coreutils   | _Ensure latest version_                |
+|   [cowsay]    | _For fun_                              |
+|    [fish]     | Fish shell                             |
+|      git      | _Ensure latest version_                |
 | [imagemagick] | Converting and editing images          |
-| [jq]          | Command-line JSON processor            |
-| [lsd]         | LSDeluxe                               |
-| lolcat        | _For fun_                              |
-| [nvim]        | Hyper-extensible Vim-based text editor |
-| [stow]        | Symlink farm manager                   |
+|     [jq]      | Command-line JSON processor            |
+|     [lsd]     | LSDeluxe                               |
+|    lolcat     | _For fun_                              |
+|    [nvim]     | Hyper-extensible Vim-based text editor |
+|    [stow]     | Symlink farm manager                   |
 
 See the [Brewfile](./Brewfile) for the complete list including macOS apps.
-
-## Things to do
-
-- [X] Single install script
-- [ ] Document (educational, for memory)
-- [ ] App settings (e.g. VS Code extensions)
-- [X] Source "local" file (allow private config) → `~/local.fish`
-
-## Links
-
-Here's a link dump in no order from my initial configuration.
-
-- <http://redsymbol.net/articles/unofficial-bash-strict-mode/>
-- <https://github.com/webpro/awesome-dotfiles>
-- <https://github.com/mathiasbynens/dotfiles>
-- <https://github.com/paulirish/dotfiles>
-- <https://mywiki.wooledge.org/BashPitfalls>
-- <https://www.sean.sh/log/when-an-alias-should-actually-be-an-abbr/>
-- <https://github.com/junegunn/vim-plug>
 
 <!-- @formatter:off -->
 [bat]: https://github.com/sharkdp/bat#readme
