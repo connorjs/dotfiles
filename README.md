@@ -34,6 +34,31 @@ If you have tips/tricks/etc, I'd love to hear them! Cheers
 2. Run the install script: `./install.sh`
 3. Restart to see all changes
 
+## File system
+
+- `$HOME/.config`: XDG config pattern. I prefer to use this where possible.
+
+  The install script uses `stow` to link this repositories packages. For
+  example, `.vimrc` ends up in `$HOME` and the `init.vim` script ends up in
+  `$HOME/.config/nvim` as expected.
+
+  _The package names in this repository exist as preferred logical naming. Only
+  this install script uses them; they do not appear in the target file system._ 
+
+- `$HOME/w`: Workspaces for code repositories. I name it `w` for brevity. If
+  needed, create `w` on the appropriate drive and symlink to it from `$HOME`.
+
+  Namespacing: Regardless of tooling, I see namespacing for code repositories.
+  GitHub has the user or organization, AWS has the account, and Azure DevOps has
+  the project.
+
+  I match this namespacing with the first-level directory structure under `w`.
+  For example, this repository will exist at `$HOME/w/connorjs/dotfiles`.
+
+  _Note: I have considered having separate workspaces or another directory per
+  tool. For example, `~/gh` or `~/w/gh` for GitHub. However, I have yet to hit
+  conflicts that warrant this additional namespace scheme._   
+
 ## Things to do
 
 - [X] Single install script
