@@ -1,5 +1,16 @@
 # Connor's dotfiles
 
+> [!IMPORTANT]
+>
+> I started working on new updates on Sep 23, 2023. Treat the README and install
+> scripts as out-of-date until I remove this message. I have two goals for these
+> updates in addition to syncing my latest settings and preferences.
+>
+> 1. Windows compatibility
+> 2. Full system configuration (beyond the terminal)
+>
+> [Browse the last stable version](https://github.com/connorjs/dotfiles/tree/pre-changelog).
+
 Welcome to my dotfiles repo! In this repo you will find my public configurations including an install script.
 
 Feel free to use any of this for inspiration, but note that I do not plan on ensuring compatibility. (_These are my personal dotfiles and I may change them on a whim._)
@@ -51,4 +62,3 @@ Here's a link dump in no order from my initial configuration.
 - <https://www.sean.sh/log/when-an-alias-should-actually-be-an-abbr/>
 - <https://github.com/junegunn/vim-plug>
 - <https://neovim.io/>
-
