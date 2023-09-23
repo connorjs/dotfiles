@@ -37,7 +37,6 @@ cask "docker"
 cask "firefox"
 cask "flux" # Settings: Halogen, Tungsten, Candle
 cask "google-chrome"
-cask "iterm2"
 cask "jetbrains-toolbox"
 #cask "microsoft-excel"
 cask "microsoft-edge"

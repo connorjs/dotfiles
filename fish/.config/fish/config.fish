@@ -1,19 +1,3 @@
-# iTerm integration
-source ~/.iterm2_shell_integration.fish
-function iterm2_print_user_vars
-  # Left: \(user.logo) | Current directory | git state
-  # Right: Node: \(user.node) | Clock
-  iterm2_set_user_var node (type -f node >/dev/null 2>&1 && node -v)
-  switch (uname)
-    case Darwin
-      iterm2_set_user_var logo \uf302 # 
-    case Linux
-      iterm2_set_user_var logo \uf31a # 
-    case '*'
-      iterm2_set_user_var logo \uf29c # 
-  end
-end
-
 # CLI
 abbr -a d 'pushd'
 abbr -a cd 'pushd'
@@ -67,4 +51,3 @@ abbr -a gs 'git status'
 if test -e ~/local.fish
   source ~/local.fish
 end
-

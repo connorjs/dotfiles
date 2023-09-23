@@ -53,7 +53,6 @@ Here's a link dump in no order from my initial configuration.
 - <https://brew.sh/>
 - <https://formulae.brew.sh/>
 - <https://github.com/paulirish/dotfiles>
-- <http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/>
 - <https://github.com/Homebrew/homebrew-bundle>
 - <https://fishshell.com/>
 - <https://mywiki.wooledge.org/BashPitfalls>
