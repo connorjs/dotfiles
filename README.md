@@ -58,7 +58,6 @@ Here's a link dump in no order from my initial configuration.
 - <https://fishshell.com/>
 - <https://mywiki.wooledge.org/BashPitfalls>
 - <http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html?round=two>
-- <https://git.io/fish-nvm>
 - <https://www.sean.sh/log/when-an-alias-should-actually-be-an-abbr/>
 - <https://github.com/junegunn/vim-plug>
 - <https://neovim.io/>

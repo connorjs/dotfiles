@@ -85,20 +85,8 @@ fi
 
 # Finish in fish
 fish -c '
-
-# Install fisher if not present
-if not functions -q fisher
-  curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-end
-
-# Run fisher (install functions)
-fisher
-
 # Path
 set -U fish_user_paths /usr/local/sbin $HOME/bin
-
-# Function-specific install
-nvm # loads node
 
 set -Ux BAT_THEME 'Solarized \(light\)'
 
@@ -153,4 +141,3 @@ myecho '5️⃣' 'AWS CLI installed\n'
 
 echo '    ✅ Complete!'
 exit 0
-
