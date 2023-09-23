@@ -11,28 +11,31 @@
 >
 > [Browse the last stable version](https://github.com/connorjs/dotfiles/tree/pre-changelog).
 
-Welcome to my dotfiles repo! In this repo you will find my public configurations including an install script.
-
-Feel free to use any of this for inspiration, but note that I do not plan on ensuring compatibility. (_These are my personal dotfiles and I may change them on a whim._)
-
-> **General mindset**
->
-> Minimize config by embracing defaults
+Welcome to my dotfiles repo! In this repo you will find my public configurations
+including an install script.
 
 If you have tips/tricks/etc, I'd love to hear them! Cheers
 
 ## TL;DR
 
-- 📜️Single install script
-- 📦Brew for package manager
-- 🐟fish shell
-- 🔌 vim-plug (and neovim)
+- 📜 Single install script
+- 📦 [Homebrew] for package manager
+- 🐟 [fish shell][fish]
+- 🔌 vim-plug (and [neovim])
 
 ## Install
 
-1. Clone this repo into your `$HOME` directory (the script expects `$HOME/dotfiles` to be this repo)
+1. Clone this repo into `$HOME/w/connorjs` (_see next section for why_)
 2. Run the install script: `./install.sh`
 3. Restart to see all changes
+
+```shell
+mkdir -p $HOME/w/connorjs
+cd $HOME/w/connorjs
+git clone https://github.com/connorjs/dotfiles.git
+cd dotfiles
+./install.sh
+```
 
 ## File system
 
@@ -40,10 +43,11 @@ If you have tips/tricks/etc, I'd love to hear them! Cheers
 
   The install script uses `stow` to link this repositories packages. For
   example, `.vimrc` ends up in `$HOME` and the `init.vim` script ends up in
-  `$HOME/.config/nvim` as expected.
+  `$HOME/.config/nvim` as expected. Also see [“Using GNU Stow to manage your
+  dotfiles”][stow-blog-post].
 
   _The package names in this repository exist as preferred logical naming. Only
-  this install script uses them; they do not appear in the target file system._ 
+  this install script uses them; they do not appear in the target file system._
 
 - `$HOME/w`: Workspaces for code repositories. I name it `w` for brevity. If
   needed, create `w` on the appropriate drive and symlink to it from `$HOME`.
@@ -57,7 +61,27 @@ If you have tips/tricks/etc, I'd love to hear them! Cheers
 
   _Note: I have considered having separate workspaces or another directory per
   tool. For example, `~/gh` or `~/w/gh` for GitHub. However, I have yet to hit
-  conflicts that warrant this additional namespace scheme._   
+  conflicts that warrant this additional namespace scheme._
+
+## Utilities
+
+[Homebrew] installs the following utilities (listed alphabetically).
+
+| Name          | Description/ reason                    |
+|---------------|----------------------------------------|
+| [bat]         | Cat clone with wings                   |
+| coreutils     | _Ensure latest version_                |
+| [cowsay]      | _For fun_                              |
+| [fish]        | Fish shell                             |
+| git           | _Ensure latest version_                |
+| [imagemagick] | Converting and editing images          |
+| [jq]          | Command-line JSON processor            |
+| [lsd]         | LSDeluxe                               |
+| lolcat        | _For fun_                              |
+| [nvim]        | Hyper-extensible Vim-based text editor |
+| [stow]        | Symlink farm manager                   |
+
+See the [Brewfile](./Brewfile) for the complete list including macOS apps.
 
 ## Things to do
 
@@ -72,16 +96,20 @@ Here's a link dump in no order from my initial configuration.
 
 - <http://redsymbol.net/articles/unofficial-bash-strict-mode/>
 - <https://github.com/webpro/awesome-dotfiles>
-- <https://github.com/jorgebucaran/awesome-fish>
 - <https://github.com/mathiasbynens/dotfiles>
-- <https://reckoning.dev/fish-shell/>
-- <https://brew.sh/>
-- <https://formulae.brew.sh/>
 - <https://github.com/paulirish/dotfiles>
-- <https://github.com/Homebrew/homebrew-bundle>
-- <https://fishshell.com/>
 - <https://mywiki.wooledge.org/BashPitfalls>
-- <http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html?round=two>
 - <https://www.sean.sh/log/when-an-alias-should-actually-be-an-abbr/>
 - <https://github.com/junegunn/vim-plug>
-- <https://neovim.io/>
+
+<!-- @formatter:off -->
+[bat]: https://github.com/sharkdp/bat#readme
+[cowsay]: https://en.wikipedia.org/wiki/Cowsay
+[fish]: https://fishshell.com
+[homebrew]: https://brew.sh/
+[imagemagick]: https://github.com/ImageMagick/ImageMagick#readme
+[jq]: https://jqlang.github.io/jq/
+[lsd]: https://github.com/lsd-rs/lsd#readme
+[nvim]: https://neovim.io/
+[stow]: https://www.gnu.org/software/stow/
+[stow-blog-post]: https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html

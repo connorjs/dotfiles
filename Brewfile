@@ -1,58 +1,45 @@
+# Brew file - Keep each section alphabetical
+# https://github.com/Homebrew/homebrew-bundle#readme
+
 # Binaries
-tap "linuxbrew/xorg" if OS.linux?
-brew "fish"
-brew "git"
-brew "jq"
+# Keep in sync with README table!
 brew "bat"
-brew "tree"
-brew "nvim"
-brew "python@3.8"
-brew "wget"
-brew "docker"
-brew "gradle"
-brew "imagemagick"
 brew "coreutils"
 brew "cowsay"
+brew "fish"
+brew "git"
+brew "imagemagick"
+brew "jq"
 brew "lolcat"
+brew "lsd"
+brew "nvim"
 brew "stow"
-brew "mas" if OS.mac?
-
-# https://github.com/corretto/corretto-8/issues/42
-tap "homebrew/cask-versions"
-cask "corretto8"
-cask "corretto"
 
 # Fonts
 tap "homebrew/cask-fonts" if OS.mac?
 cask "font-jetbrains-mono-nerd-font", args: { fontdir: "/Library/Fonts" }
 
 # macOS apps
-cask_args appdir: "/Applications"
+cask_args appdir: "/Applications", require_sha: true
 cask "1password"
 cask "alfred"
-cask "amazon-chime"
-cask "amazon-photos"
 cask "authy"
-cask "docker"
 cask "firefox"
 cask "flux" # Settings: Halogen, Tungsten, Candle
 cask "google-chrome"
 cask "jetbrains-toolbox"
-#cask "microsoft-excel"
 cask "microsoft-edge"
-#cask "microsoft-powerpoint"
-#cask "microsoft-outlook"
-#cask "microsoft-word"
-cask "opera"
-cask "quip"
 cask "rocket" # Settings: :: as trigger
-cask "setapp"
-cask "sketch"
-cask "sketchpacks"
 cask "spotify"
 cask "visual-studio-code"
 cask "xpra"
 
 # macOS App Store
-mas "Magnet", id: 441258766
+brew "mas" if OS.mac?
+mas "1Password for Safari", id: 1569813296
+mas "Clocker", id: 1056643111
+mas "Dark Reader for Safari", id: 1438243180
 mas "Endel", id: 1484348796
+mas "Live Home 3D Pro: Design House", id: 1066145115
+mas "Magnet", id: 441258766
+mas "Speedtest by Ookla", id: 1153157709
