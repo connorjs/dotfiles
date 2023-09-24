@@ -27,14 +27,17 @@ If you have tips/tricks/etc, I’d love to hear them! Cheers
 
 1. Clone this repo into `$HOME/w/connorjs` (_see next section for why_)
 2. Run the install script: `./install.sh`
-3. Restart to see all changes
+3. Edit `.gitconfig` (or use `git config --global`)
+4. Restart to see all changes
 
 ```shell
-mkdir -p $HOME/w/connorjs
-cd $HOME/w/connorjs
-git clone https://github.com/connorjs/dotfiles.git
-cd dotfiles
-./install.sh
+mkdir -p $HOME/w/connorjs && \
+cd $HOME/w/connorjs && \
+git clone https://github.com/connorjs/dotfiles.git && \
+cd dotfiles && \
+./install.sh && \
+cd $HOME && \
+vim .gitconfig
 ```
 
 ## File system
