@@ -20,8 +20,10 @@ Mac and Windows. Multiple shells. Same tools. One install script.
 ./install.sh
 ```
 
-<span role="img" aria-label="">🐟</span>&nbsp;
-[Fish].
+<p>
+<span role="img" aria-label="">🐟</span>&nbsp;<a href="https://fishshell.com">Fish</a>
+</p>
+
 <span role="img" aria-label="">🐱</span>&nbsp;
 [Kitty].
 <span role="img" aria-label="">🍺</span>&nbsp;
