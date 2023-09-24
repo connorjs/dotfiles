@@ -1,4 +1,68 @@
-# Connor’s dotfiles
+<a id="readme-top"></a>
+
+<div align="center">
+
+# connorjs dotfiles
+
+Mac and Windows. Multiple shells. Same tools. One install script.
+
+## Highlights
+
+</div>
+
+<table>
+<tr>
+<td width="1024px" align="center">
+
+<h3 id="mac">Mac</h3>
+
+```shell
+./install.sh
+```
+
+<span role="img" aria-label="">🐟</span>&nbsp;[Fish].
+<span role="img" aria-label="">🐱</span>&nbsp;[Kitty].
+<span role="img" aria-label="">🍺</span>&nbsp;[Homebrew].
+
+</td>
+<td width="50%" align="center">
+
+<h3 id="windows">Windows</h3>
+
+```shell
+./install.bat
+```
+
+<span role="img" aria-label=""></span>&nbsp;Shell?
+<span role="img" aria-label=""></span>&nbsp;Terminal?
+<span role="img" aria-label="">🍫</span>&nbsp;Chocolatey?
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+
+Nushell?
+PowerShell?
+[Oh My Posh][oh-my-posh].
+[Neovim][nvim].
+
+</td>
+</tr>
+</table>
+
+<details>
+<summary>Table of Contents</summary>
+
+- [Highlights](#highlights)
+- [About](#about)
+- [Install](#install)
+- [Terminal](#terminal)
+- [Utilities](#utilities)
+- [Aliases](#aliases)
+- [File system](#file-system)
+
+</details>
 
 > [!IMPORTANT]
 >
@@ -11,23 +75,19 @@
 >
 > [Browse the last stable version](https://github.com/connorjs/dotfiles/tree/pre-changelog).
 
-Welcome to my dotfiles repo! In this repo you will find my public configurations
-including an install script.
+## About
 
-If you have tips/tricks/etc, I’d love to hear them! Cheers
+Welcome to my dotfiles repo! You will find my public configurations including
+a single install script for each OS.
 
-## TL;DR
+If you have any tips, tricks, or recommendations, I’d love to hear them! Cheers
 
-|                          |          Mac          | Windows |
-|--------------------------|:---------------------:|:-------:|
-| 📜 Single install script |           ✔           | _TODO_  |
-| 📦 Installed utilities   |     🍺 [Homebrew]     | _TODO_  |
-| 🐚 Primary shell         | 🐟 [fish shell][fish] | _TODO_  |
+<div align="right">(<a href="#readme-top">back to top</a>)</div>
 
 ## Install
 
-1. Clone this repo into `$HOME/w/connorjs` (_see next section for why_)
-2. Run the install script: `./install.sh`
+1. Clone this repo
+2. Run the install script: `./install.sh` for Mac and `./install.bat` for Windows
 3. Edit `.gitconfig` (or use `git config --global`)
 4. Restart to see all changes
 
@@ -44,17 +104,23 @@ cd $HOME && \
 vim .gitconfig
 ```
 
+_See [§ Workspaces](#workspaces) for why I use the `~/w/connorjs` path._
+
 </details>
+
+<div align="right">(<a href="#readme-top">back to top</a>)</div>
 
 ## Terminal
 
 I use [Kitty] (a fast, feature-rich, GPU based terminal emulator) with
-[Selenized] (Solarized redesigned) color schemes (Light and Black). The 
+[Selenized] (Solarized redesigned) color schemes (Light and Black). The
 [on-dark-mode-change](./bin/on-dark-mode-change) script syncs the Kitty theme
 with the System preference.
 
 I have programmed the F6 media key to toggle between light and dark mode (the
 key has a moon on it; its original function is Do not Disturb).
+
+<div align="right">(<a href="#readme-top">back to top</a>)</div>
 
 ## Utilities
 
@@ -79,12 +145,14 @@ key has a moon on it; its original function is Do not Disturb).
 
 See the [Brewfile](./Brewfile) for the complete list including macOS apps.
 
+<div align="right">(<a href="#readme-top">back to top</a>)</div>
+
 ## Aliases
 
 Includes a consistent configuration of aliases (abbreviations in fish) across
 multiple shells.
 
-- 🐟 See [fish/conf.d](./fish/.config/fish/conf.d)
+- <span aria-label="Fish">🐟</span> See [fish/conf.d](./fish/.config/fish/conf.d)
 
 ### Git
 
@@ -100,6 +168,8 @@ all aliases instead of sourcing them. I also do not include aliases I never use
 ### LSD
 
 Includes various `ls` aliases: `l`, `la`, `ll`, `lt`, `t`, `t3`, and more.
+
+<div align="right">(<a href="#readme-top">back to top</a>)</div>
 
 ## File system
 
@@ -133,6 +203,8 @@ For example, this repository will exist at `$HOME/w/connorjs/dotfiles`.
 _Note: I have considered having separate workspaces or another directory per
 tool. For example, `~/gh` or `~/w/gh` for GitHub. However, I have yet to hit
 conflicts that warrant this additional namespace scheme._
+
+<div align="right">(<a href="#readme-top">back to top</a>)</div>
 
 <!-- @formatter:off -->
 [bat]: https://github.com/sharkdp/bat#readme

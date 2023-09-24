@@ -12,11 +12,7 @@ IFS=$'\t\n'
 # 0. Pre-steps #
 ################
 
-DOTFILES_DIR=$HOME/w/connorjs/dotfiles
-if [ ! -d "$DOTFILES_DIR" ]; then
-  echo "dotfiles not installed in $HOME/w/connorjs"
-  exit 1
-fi
+DOTFILES_DIR=$(dirname "$0")
 
 myecho() { # Hack for better visibility for me
   printf '    %s /4 %b\n' "$1" "$2"
@@ -65,8 +61,14 @@ myecho '2️⃣' 'OS-specific setup ran 🏃‍♂️\n'
 myecho '3️⃣' 'Symlinking dotfiles...'
 
 # Just use stow 🤩
-stow -vt "$HOME" fish kitty lsd node oh-my-posh vim
-cp git/* "$HOME" # Prefer copy for git (credentials)
+stow -vt "$HOME" \
+  "$DOTFILES_DIR/fish" \
+  "$DOTFILES_DIR/kitty" \
+  "$DOTFILES_DIR/lsd" \
+  "$DOTFILES_DIR/node" \
+  "$DOTFILES_DIR/oh-my-posh" \
+  "$DOTFILES_DIR/vim"
+cp "$DOTFILES_DIR/git/*" "$HOME" # Prefer copy for git (credentials)
 
 myecho '3️⃣' 'Dotfiles symlinked 🔗\n'
 
