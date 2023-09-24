@@ -20,9 +20,9 @@ Mac and Windows. Multiple shells. Same tools. One install script.
 ./install.sh
 ```
 
-<span role="img" aria-label="">🐟</span>&nbsp;[Fish].
-<span role="img" aria-label="">🐱</span>&nbsp;[Kitty].
-<span role="img" aria-label="">🍺</span>&nbsp;[Homebrew].
+[![](./images/openmoji/fish.svg) Fish][fish].
+[![](./images/openmoji/cat-face.svg) Kitty][kitty].
+[![](./images/openmoji/beer-mug.svg) Homebrew][homebrew].
 
 </td>
 <td width="50%" align="center">
@@ -33,9 +33,9 @@ Mac and Windows. Multiple shells. Same tools. One install script.
 ./install.bat
 ```
 
-<span role="img" aria-label=""></span>&nbsp;Shell?
-<span role="img" aria-label=""></span>&nbsp;Terminal?
-<span role="img" aria-label="">🍫</span>&nbsp;Chocolatey?
+Shell?
+Terminal?
+[![](./images/openmoji/chocolate-bar.svg) Chocolatey?][chocolatey].
 
 </td>
 </tr>
@@ -152,7 +152,7 @@ See the [Brewfile](./Brewfile) for the complete list including macOS apps.
 Includes a consistent configuration of aliases (abbreviations in fish) across
 multiple shells.
 
-- <span aria-label="Fish">🐟</span> See [fish/conf.d](./fish/.config/fish/conf.d)
+- Fish: [fish/conf.d](./fish/.config/fish/conf.d)
 
 ### Git
 
@@ -206,8 +206,23 @@ conflicts that warrant this additional namespace scheme._
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
+## Acknowledgements
+
+### Attributions
+
+#### OpenMoji
+
+All emojis designed by [OpenMoji](https://openmoji.org/) – the open-source emoji
+and icon project. License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/#).
+
+See [images/openmoji/LICENSE.md](./images/openmoji/LICENSE.md) for details on
+modifications and ShareAlike redistribution.
+
+<div align="right">(<a href="#readme-top">back to top</a>)</div>
+
 <!-- @formatter:off -->
 [bat]: https://github.com/sharkdp/bat#readme
+[chocolatey]: https://community.chocolatey.org
 [cowsay]: https://en.wikipedia.org/wiki/Cowsay
 [fish]: https://fishshell.com
 [fnm]: https://github.com/Schniz/fnm#readme
