@@ -14,7 +14,7 @@ Testing speech.
 
 <a href="https://fishshell.com"><img src="./images/1F41F.svg" width=16 alt="">&nbsp;Fish</a>
 
-<img src="./images/1F41F.svg" width=16 alt=""> <a href="https://fishshell.com">Fish</a>
+<a href="https://fishshell.com"><img src="./images/1F41F-copy.svg" width=16 alt="">&nbsp;Fish</a>
 
 End testing speech.
 
