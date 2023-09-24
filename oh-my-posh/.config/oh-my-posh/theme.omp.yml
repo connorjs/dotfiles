@@ -1,0 +1,50 @@
+$schema: "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+version: 2
+blocks:
+  # Horizontal line
+  - alignment: left
+    type: prompt
+    segments:
+      - type: text
+        style: plain
+        foreground: default
+        template: "{{ .Env.HRULE80 }}\n" # include blank line
+  # Main prompt line
+  - alignment: left
+    type: prompt
+    newline: true
+    segments:
+      - type: path
+        style: plain
+        foreground: green
+        template: "{{ .Path }} " # remove leading space (keep trailing space)
+        properties:
+          style: full
+      - type: git
+        style: plain
+        foreground: default
+        template: > # default (re-formatted for YAML; new lines = spaces)
+          <yellow>({{ .HEAD }})</>
+          {{- if .BranchStatus }} {{ .BranchStatus }}{{ end }}
+          <magenta>{{ .Commit.Subject }}</>
+          {{ .Working }}
+        properties:
+          branch_icon: ""
+          branch_gone_icon: ""
+          fetch_status: true
+      - type: executiontime
+        style: plain
+        foreground: default
+      - type: status
+        style: plain
+        foreground: red
+        template: " [{{ .Code }}]" # add brackets
+  # Single character on command entry line
+  - alignment: left
+    type: prompt
+    newline: true
+    segments:
+      - type: text
+        style: plain
+        foreground: default
+        template: "{{ if .Root }}#{{ else }}❯{{ end }} " # include trailing space

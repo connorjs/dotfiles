@@ -59,7 +59,7 @@ myecho '2️⃣' 'OS-specific setup ran 🏃‍♂️\n'
 myecho '3️⃣' 'Symlinking dotfiles...'
 
 # Just use stow 🤩
-stow -vt "$HOME" fish node vim
+stow -vt "$HOME" fish node oh-my-posh vim
 
 myecho '3️⃣' 'Dotfiles symlinked 🔗\n'
 

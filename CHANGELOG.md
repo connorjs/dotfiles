@@ -9,6 +9,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - Created CHANGELOG
+- Oh My Posh prompt
+
+### Changed
+
+- Updated Homebrew-managed formulae, casks, and macOS apps
 
 ### Removed
 
@@ -16,6 +21,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - iterm2 (replaced by kitty)
 - nvm (replaced by fnm)
 - fisher (only used for nvm)
+- Custom fish prompt (replaced by Oh My Posh)
 
 ## [Earlier]
 
