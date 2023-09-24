@@ -20,7 +20,7 @@ Mac and Windows. Multiple shells. Same tools. One install script.
 ./install.sh
 ```
 
-<span role="img" aria-hidden="true">🐟</span>
+<div aria-hidden="true">🐟</div>
 
 <a href="https://fishshell.com">Fish</a>
 
