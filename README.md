@@ -74,15 +74,16 @@ conflicts that warrant this additional namespace scheme._
 |     Name      | Description/reason                     |
 |:-------------:|:---------------------------------------|
 |     [bat]     | Cat clone with wings                   |
-|   coreutils   | _Ensure latest version_                |
 |   [cowsay]    | _For fun_                              |
 |    [fish]     | Fish shell                             |
 |      git      | _Ensure latest version_                |
+|  [git-delta]  | Syntax-highlighting pager (git diff)   |
 | [imagemagick] | Converting and editing images          |
 |     [jq]      | Command-line JSON processor            |
 |     [lsd]     | LSDeluxe                               |
 |    lolcat     | _For fun_                              |
 |    [nvim]     | Hyper-extensible Vim-based text editor |
+| [oh-my-posh]  | Prompt theme engine for any shell      |
 |    [stow]     | Symlink farm manager                   |
 
 See the [Brewfile](./Brewfile) for the complete list including macOS apps.
@@ -91,10 +92,12 @@ See the [Brewfile](./Brewfile) for the complete list including macOS apps.
 [bat]: https://github.com/sharkdp/bat#readme
 [cowsay]: https://en.wikipedia.org/wiki/Cowsay
 [fish]: https://fishshell.com
+[git-delta]: https://dandavison.github.io/delta/
 [homebrew]: https://brew.sh/
 [imagemagick]: https://github.com/ImageMagick/ImageMagick#readme
 [jq]: https://jqlang.github.io/jq/
 [lsd]: https://github.com/lsd-rs/lsd#readme
 [nvim]: https://neovim.io/
+[oh-my-posh]: https://ohmyposh.dev
 [stow]: https://www.gnu.org/software/stow/
 [stow-blog-post]: https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html

@@ -4,15 +4,16 @@
 # Binaries
 # Keep in sync with README table!
 brew "bat"
-brew "coreutils"
 brew "cowsay"
 brew "fish"
 brew "git"
+brew "git-delta"
 brew "imagemagick"
 brew "jq"
 brew "lolcat"
 brew "lsd"
 brew "nvim"
+brew "oh-my-posh"
 brew "stow"
 
 # Fonts
@@ -26,11 +27,9 @@ cask "alfred"
 cask "authy"
 cask "firefox"
 cask "flux" # Settings: Halogen, Tungsten, Candle
-cask "google-chrome"
 cask "jetbrains-toolbox"
 cask "microsoft-edge"
 cask "rocket" # Settings: :: as trigger
-cask "spotify"
 cask "visual-studio-code"
 cask "xpra"
 
