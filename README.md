@@ -20,9 +20,12 @@ Mac and Windows. Multiple shells. Same tools. One install script.
 ./install.sh
 ```
 
-<span role="img" aria-label="">🐟</span>&nbsp;[Fish].
-<span role="img" aria-label="">🐱</span>&nbsp;[Kitty].
-<span role="img" aria-label="">🍺</span>&nbsp;[Homebrew].
+<span role="img" aria-label="">🐟</span>&nbsp;
+[Fish].
+<span role="img" aria-label="">🐱</span>&nbsp;
+[Kitty].
+<span role="img" aria-label="">🍺</span>&nbsp;
+[Homebrew].
 
 </td>
 <td width="50%" align="center">
