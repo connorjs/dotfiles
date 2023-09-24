@@ -79,6 +79,7 @@ if [[ ! "$SHELL" == $(which fish) ]]; then
 
   # Finish in fish
   fish -c "fish_add_path $HOME/bin"
+  fish -c "fish_add_path /opt/homebrew/opt/curl/bin"
 fi
 
 myecho '4️⃣' 'Shell configured 🐟\n'

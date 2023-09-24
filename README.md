@@ -78,7 +78,9 @@ conflicts that warrant this additional namespace scheme._
 |:-------------:|:---------------------------------------|
 |     [bat]     | Cat clone with wings                   |
 |   [cowsay]    | _For fun_                              |
+|     curl      | _Ensure latest version_                |
 |    [fish]     | Fish shell                             |
+|     [fnm]     | Fast node manager                      |
 |      git      | _Ensure latest version_                |
 |  [git-delta]  | Syntax-highlighting pager (git diff)   |
 | [imagemagick] | Converting and editing images          |
@@ -95,6 +97,7 @@ See the [Brewfile](./Brewfile) for the complete list including macOS apps.
 [bat]: https://github.com/sharkdp/bat#readme
 [cowsay]: https://en.wikipedia.org/wiki/Cowsay
 [fish]: https://fishshell.com
+[fnm]: https://github.com/Schniz/fnm#readme
 [git-delta]: https://dandavison.github.io/delta/
 [homebrew]: https://brew.sh/
 [imagemagick]: https://github.com/ImageMagick/ImageMagick#readme

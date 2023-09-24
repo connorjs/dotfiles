@@ -5,7 +5,9 @@
 # Keep in sync with README table!
 brew "bat"
 brew "cowsay"
+brew "curl"
 brew "fish"
+brew "fnm"
 brew "git"
 brew "git-delta"
 brew "imagemagick"
