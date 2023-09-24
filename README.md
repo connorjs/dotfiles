@@ -12,9 +12,11 @@ Mac and Windows. Multiple shells. Same tools. One install script.
 
 Testing speech.
 
+<a href="https://fishshell.com"><img src="./images/1F41F-16.svg" width=16 alt="">&nbsp;Fish</a>
+
 <a href="https://fishshell.com"><img src="./images/1F41F.svg" width=16 alt="">&nbsp;Fish</a>
 
-<a href="https://fishshell.com"><img src="./images/1F41F-copy.svg" width=16 alt="">&nbsp;Fish</a>
+<a href="https://fishshell.com"><img src="./images/1F41F-8.svg" width=16 alt="">&nbsp;Fish</a>
 
 End testing speech.
 
