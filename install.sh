@@ -65,7 +65,7 @@ myecho '2️⃣' 'OS-specific setup ran 🏃‍♂️\n'
 myecho '3️⃣' 'Symlinking dotfiles...'
 
 # Just use stow 🤩
-stow -vt "$HOME" fish lsd node oh-my-posh vim
+stow -vt "$HOME" fish kitty lsd node oh-my-posh vim
 cp git/* "$HOME" # Prefer copy for git (credentials)
 
 myecho '3️⃣' 'Dotfiles symlinked 🔗\n'

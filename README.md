@@ -46,6 +46,16 @@ vim .gitconfig
 
 </details>
 
+## Terminal
+
+I use [Kitty] (a fast, feature-rich, GPU based terminal emulator) with
+[Selenized] (Solarized redesigned) color schemes (Light and Black). The 
+[on-dark-mode-change](./bin/on-dark-mode-change) script syncs the Kitty theme
+with the System preference.
+
+I have programmed the F6 media key to toggle between light and dark mode (the
+key has a moon on it; its original function is Do not Disturb).
+
 ## Utilities
 
 [Homebrew] installs the following utilities (listed alphabetically).
@@ -137,9 +147,11 @@ conflicts that warrant this additional namespace scheme._
 [homebrew]: https://brew.sh/
 [imagemagick]: https://github.com/ImageMagick/ImageMagick#readme
 [jq]: https://jqlang.github.io/jq/
+[kitty]: https://sw.kovidgoyal.net/kitty/
 [lsd]: https://github.com/lsd-rs/lsd#readme
 [nvim]: https://neovim.io/
 [oh-my-posh]: https://ohmyposh.dev
+[selenized]: https://github.com/jan-warchol/selenized/tree/master#readme
 [stow]: https://www.gnu.org/software/stow/
 [stow-blog-post]: https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
 [xdg-basedir-spec]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html

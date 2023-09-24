@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [[ "$DARKMODE" -eq 1 ]]; then
+	/Applications/kitty.app/Contents/MacOS/kitty +kitten themes --reload-in=all Selenized\ Black
+else
+	/Applications/kitty.app/Contents/MacOS/kitty +kitten themes --reload-in=all Selenized\ Light
+fi
