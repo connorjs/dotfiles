@@ -69,6 +69,28 @@ vim .gitconfig
 
 See the [Brewfile](./Brewfile) for the complete list including macOS apps.
 
+## Aliases
+
+Includes a consistent configuration of aliases (abbreviations in fish) across
+multiple shells.
+
+- 🐟 See [fish/conf.d](./fish/.config/fish/conf.d)
+
+### Git
+
+Includes shell aliases inspired by [gitalias.com][git-alias-dot-com],
+[Nushell][git-alias-nushell], [Oh My Zsh][git-alias-zsh], and [a Fish shell git
+plugin][git-alias-fish]. Mine do not match 1:1 in the same way that these do
+not match 1:1 to each other.
+
+To ensure strong consistency across my own shell configurations, I hand-write
+all aliases instead of sourcing them. I also do not include aliases I never use
+(example: `--signoff` variations for `git commit`).
+
+### LSD
+
+Includes various `ls` aliases: `l`, `la`, `ll`, `lt`, `t`, `t3`, and more.
+
 ## File system
 
 ### XDG base directory
@@ -107,6 +129,10 @@ conflicts that warrant this additional namespace scheme._
 [cowsay]: https://en.wikipedia.org/wiki/Cowsay
 [fish]: https://fishshell.com
 [fnm]: https://github.com/Schniz/fnm#readme
+[git-alias-dot-com]: https://www.gitalias.com
+[git-alias-fish]: https://github.com/jhillyerd/plugin-git#readme
+[git-alias-nushell]: https://github.com/nushell/nu_scripts/blob/main/aliases/git/git-aliases.nu
+[git-alias-zsh]: https://kapeli.com/cheat_sheets/Oh-My-Zsh_Git.docset/Contents/Resources/Documents/index
 [git-delta]: https://dandavison.github.io/delta/
 [homebrew]: https://brew.sh/
 [imagemagick]: https://github.com/ImageMagick/ImageMagick#readme

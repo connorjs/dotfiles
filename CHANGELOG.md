@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
+- Modified and added git aliases (abbreviations in fish)
 - Updated Homebrew-managed formulae, casks, and macOS apps
 
 ### Removed

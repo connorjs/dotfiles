@@ -1,23 +1,33 @@
-[init]
-	defaultBranch = main
-
 [user]
 	name = {git.name}
 	email = {git.email}
 
-[alias]
-	# Assumes `main` branch
-	recent = "!r() { refbranch=$1 count=$2; git for-each-ref --sort=-committerdate refs/heads --format='%(refname:short)|%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always --count=${count:-20} | while read line; do branch=$(echo \"$line\" | awk 'BEGIN { FS = \"|\" }; { print $1 }' | tr -d '*'); ahead=$(git rev-list --count \"${refbranch:-origin/main}..${branch}\"); behind=$(git rev-list --count \"${branch}..${refbranch:-origin/main}\"); colorline=$(echo \"$line\" | sed 's/^[^|]*|//'); echo \"$ahead|$behind|$colorline\" | awk -F'|' -vOFS='|' '{$5=substr($5,1,70)}1' ; done | ( echo \"ahead|behind||branch|lastcommit|message|author\\n\" && cat) | column -ts'|';}; r"
-
 [core]
+	autocrlf = input # Mac-specific, TODO: Windows
 	editor = nvim
+	excludesFile = ~/.gitignore
 	# Mac specific! TODO: Windows!
 	# https://github.com/dandavison/delta/issues/447#issuecomment-1239398586
-	pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark || echo light)"	
-	excludesFile = ~/.gitignore
+	pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark || echo light)"
+
+[init]
+	defaultBranch = main
 
 [interactive]
 	diffFilter = delta --color-only
+
+[merge]
+	conflictstyle = zdiff3
+
+# https://git-scm.com/docs/gitattributes#_defining_a_custom_merge_driver
+[merge "theirs"]
+	name = Keep upstream changes
+	driver = cp -f "%B" "%A"
+
+[rebase]
+	autoSquash = true
+
+#--- Tool specific ---#
 
 [delta]
 	navigate = true # use n and N to move between diff sections
@@ -31,6 +41,3 @@
 [delta "dark"]
 	light = false
 	syntax-theme = ansi
-
-[merge]
-	conflictstyle = diff3
