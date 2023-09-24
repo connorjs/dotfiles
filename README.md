@@ -12,13 +12,9 @@ Mac and Windows. Multiple shells. Same tools. One install script.
 
 Testing speech.
 
-Inline <span role="img" aria-label="">🐟</span> text
+<a href="https://fishshell.com"><img src="./images/1F41F.svg" width=16 alt="">&nbsp;Fish</a>
 
-Inline <span aria-hidden="true">🐟</div> text
-
-Inline <img src="./images/1F41F.png" width=16 alt=""> text
-
-Inline <img src="./images/1F41F.svg" width=16 alt=""> text
+<img src="./images/1F41F.svg" width=16 alt=""> <a href="https://fishshell.com">Fish</a>
 
 End testing speech.
 
