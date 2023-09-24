@@ -1,0 +1,35 @@
+# https://github.com/lsd-rs/lsd#config-file-content
+
+# Possible values: permission, user, group, context, size, date, name, inode, links, git
+blocks:
+  - date
+  - user
+  - size
+  - name
+# Also note: `-g` to show git
+
+# 2023-09-24 09:34:00
+date: '+%Y-%m-%d %H:%M:%S'
+
+# Ignores that simplify tree view
+ignore-globs:
+  - .idea
+  - .git
+
+# Shows `dir/` and `executable*` with indicators
+indicators: true
+
+# Options: `grid`, `oneline` (one-per-line), and `tree`
+layout: oneline
+
+recursion:
+  enabled: false # applies to `grid` and `oneline`
+  depth: 2 # default depth; can be overridden with `--depth`
+
+# Match IDE settings
+sorting:
+  dir-grouping: first
+# Also note: `-t` for timesort, `-S` for sizesort
+
+# Hyperlink filenames
+hyperlink: auto

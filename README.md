@@ -61,7 +61,7 @@ vim .gitconfig
 |  [git-delta]  | Syntax-highlighting pager (git diff)   |
 | [imagemagick] | Converting and editing images          |
 |     [jq]      | Command-line JSON processor            |
-|     [lsd]     | LSDeluxe                               |
+|     [lsd]     | LSDeluxe (includes `--tree`)           |
 |    lolcat     | _For fun_                              |
 |    [nvim]     | Hyper-extensible Vim-based text editor |
 | [oh-my-posh]  | Prompt theme engine for any shell      |
@@ -71,9 +71,12 @@ See the [Brewfile](./Brewfile) for the complete list including macOS apps.
 
 ## File system
 
-### XDG config
+### XDG base directory
 
-`$HOME/.config`: I prefer to use the XDG config pattern where possible.
+`$HOME/.config`: I prefer to follow the [XDG base directory
+specification][xdg-basedir-spec] where possible.
+
+_I need to figure out the Windows parallel. Maybe `%APPDATA%`?_
 
 The install script uses `stow` to link this repositories packages. For example,
 `.vimrc` ends up in `$HOME` and the `init.vim` script ends up in
@@ -113,3 +116,4 @@ conflicts that warrant this additional namespace scheme._
 [oh-my-posh]: https://ohmyposh.dev
 [stow]: https://www.gnu.org/software/stow/
 [stow-blog-post]: https://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
+[xdg-basedir-spec]: https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html

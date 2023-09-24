@@ -26,7 +26,7 @@ myecho() { # Hack for better visibility for me
 # 1. Packages #
 ###############
 
-myecho '1️⃣' 'Installing packages with brew...'
+myecho '1️⃣' 'Installing packages and applications...'
 
 # Only download brew if not present
 if ! [ -x "$(command -v brew)" ]; then
@@ -38,11 +38,17 @@ brew analytics off
 
 # Allow failures w/ `|| true` (some things may already be installed)
 brew bundle exec -- \
-    brew bundle install --file "$DOTFILES_DIR/Brewfile" --no-lock || true 
+    brew bundle install --file "$DOTFILES_DIR/Brewfile" --no-lock || true
 
-myecho '1️⃣' 'Packages installed 📦\n'
+# Finish with non-brew things
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
-# 2. OS-specific
+myecho '1️⃣' 'Packages and applications installed 📦\n'
+
+##################
+# 2. OS-specific #
+##################
+
 myecho '2️⃣' 'Running OS-specific setup...'
 
 # Execute all `*.sh` scripts in OS-specific (as returned by `uname`) directory
@@ -59,7 +65,7 @@ myecho '2️⃣' 'OS-specific setup ran 🏃‍♂️\n'
 myecho '3️⃣' 'Symlinking dotfiles...'
 
 # Just use stow 🤩
-stow -vt "$HOME" fish node oh-my-posh vim
+stow -vt "$HOME" fish lsd node oh-my-posh vim
 cp git/* "$HOME" # Prefer copy for git (credentials)
 
 myecho '3️⃣' 'Dotfiles symlinked 🔗\n'
