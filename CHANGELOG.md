@@ -13,11 +13,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Oh My Posh prompt
 - fnm (fast node manager)
 - git global files
+- fish completions, functions, and variables to git
 
 ### Changed
 
 - Modified and added git aliases (abbreviations in fish)
 - Updated Homebrew-managed formulae, casks, and macOS apps
+- Synced fish config
 
 ### Removed
 

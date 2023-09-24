@@ -13,7 +13,7 @@ if status is-interactive
 	abbr -a gb   git branch
 	abbr -a gba  git branch --all
 	abbr -a gbd  git branch --delete
-	abbr -a gbda git branch --no-color --merged | grep -vE "^([+]|\s(main|develop|master)\s*$)" | xargs git branch -d 2>/dev/null
+	abbr -a gbda 'git branch --no-color --merged | grep -vE "^([+]|\s(main|develop|master)\s*$)" | xargs git branch -d 2>/dev/null'
 	abbr -a gbD  git branch --delete --force
 	abbr -a gbnm git branch --no-merged
 	abbr -a gbr  git branch --remote

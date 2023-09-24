@@ -82,10 +82,6 @@ if [[ ! "$SHELL" == $(which fish) ]]; then
   grep "$(which fish)" < /etc/shells > /dev/null || \
       sudo sh -c "echo $(which fish) >> /etc/shells"
   chsh -s "$(which fish)"
-
-  # Finish in fish
-  fish -c "fish_add_path $HOME/bin"
-  fish -c "fish_add_path /opt/homebrew/opt/curl/bin"
 fi
 
 myecho '4️⃣' 'Shell configured 🐟\n'

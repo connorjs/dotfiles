@@ -15,6 +15,10 @@ date: '+%Y-%m-%d %H:%M:%S'
 ignore-globs:
   - .idea
   - .git
+  - build
+  - coverage
+  - dist
+  - node_modules
 
 # Shows `dir/` and `executable*` with indicators
 indicators: true
