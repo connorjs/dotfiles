@@ -18,10 +18,11 @@ If you have tips/tricks/etc, I’d love to hear them! Cheers
 
 ## TL;DR
 
-- 📜 Single install script
-- 📦 [Homebrew] for package manager
-- 🐟 [fish shell][fish]
-- 🔌 vim-plug (and [neovim])
+|                          |          Mac          | Windows |
+|--------------------------|:---------------------:|:-------:|
+| 📜 Single install script |           ✔           | _TODO_  |
+| 📦 Installed utilities   |     🍺 [Homebrew]     | _TODO_  |
+| 🐚 Primary shell         | 🐟 [fish shell][fish] | _TODO_  |
 
 ## Install
 
@@ -29,6 +30,9 @@ If you have tips/tricks/etc, I’d love to hear them! Cheers
 2. Run the install script: `./install.sh`
 3. Edit `.gitconfig` (or use `git config --global`)
 4. Restart to see all changes
+
+<details>
+<summary>Shell commands</summary>
 
 ```shell
 mkdir -p $HOME/w/connorjs && \
@@ -39,6 +43,31 @@ cd dotfiles && \
 cd $HOME && \
 vim .gitconfig
 ```
+
+</details>
+
+## Utilities
+
+[Homebrew] installs the following utilities (listed alphabetically).
+
+|     Name      | Description/reason                     |
+|:-------------:|:---------------------------------------|
+|     [bat]     | Cat clone with wings                   |
+|   [cowsay]    | _For fun_                              |
+|     curl      | _Ensure latest version_                |
+|    [fish]     | Fish shell                             |
+|     [fnm]     | Fast node manager                      |
+|      git      | _Ensure latest version_                |
+|  [git-delta]  | Syntax-highlighting pager (git diff)   |
+| [imagemagick] | Converting and editing images          |
+|     [jq]      | Command-line JSON processor            |
+|     [lsd]     | LSDeluxe                               |
+|    lolcat     | _For fun_                              |
+|    [nvim]     | Hyper-extensible Vim-based text editor |
+| [oh-my-posh]  | Prompt theme engine for any shell      |
+|    [stow]     | Symlink farm manager                   |
+
+See the [Brewfile](./Brewfile) for the complete list including macOS apps.
 
 ## File system
 
@@ -69,29 +98,6 @@ For example, this repository will exist at `$HOME/w/connorjs/dotfiles`.
 _Note: I have considered having separate workspaces or another directory per
 tool. For example, `~/gh` or `~/w/gh` for GitHub. However, I have yet to hit
 conflicts that warrant this additional namespace scheme._
-
-## Utilities
-
-[Homebrew] installs the following utilities (listed alphabetically).
-
-|     Name      | Description/reason                     |
-|:-------------:|:---------------------------------------|
-|     [bat]     | Cat clone with wings                   |
-|   [cowsay]    | _For fun_                              |
-|     curl      | _Ensure latest version_                |
-|    [fish]     | Fish shell                             |
-|     [fnm]     | Fast node manager                      |
-|      git      | _Ensure latest version_                |
-|  [git-delta]  | Syntax-highlighting pager (git diff)   |
-| [imagemagick] | Converting and editing images          |
-|     [jq]      | Command-line JSON processor            |
-|     [lsd]     | LSDeluxe                               |
-|    lolcat     | _For fun_                              |
-|    [nvim]     | Hyper-extensible Vim-based text editor |
-| [oh-my-posh]  | Prompt theme engine for any shell      |
-|    [stow]     | Symlink farm manager                   |
-
-See the [Brewfile](./Brewfile) for the complete list including macOS apps.
 
 <!-- @formatter:off -->
 [bat]: https://github.com/sharkdp/bat#readme
