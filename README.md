@@ -10,6 +10,18 @@ Mac and Windows. Multiple shells. Same tools. One install script.
 
 </div>
 
+Testing speech.
+
+Inline <span role="img" aria-label="">🐟</span> text
+
+Inline <span aria-hidden="true">🐟</div> text
+
+Inline <img src="./images/1F41F.png" width=16 alt=""> text
+
+Inline <img src="./images/1F41F.svg" width=16 alt=""> text
+
+End testing speech.
+
 <table>
 <tr>
 <td width="1024px" align="center">
@@ -208,6 +220,14 @@ For example, this repository will exist at `$HOME/w/connorjs/dotfiles`.
 _Note: I have considered having separate workspaces or another directory per
 tool. For example, `~/gh` or `~/w/gh` for GitHub. However, I have yet to hit
 conflicts that warrant this additional namespace scheme._
+
+<div align="right">(<a href="#readme-top">back to top</a>)</div>
+
+## Acknowledgements
+
+### Attributions
+
+All emojis designed by [OpenMoji](https://openmoji.org/) – the open-source emoji and icon project. License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/#)
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
