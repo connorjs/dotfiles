@@ -22,10 +22,10 @@ if status is-interactive
 	# checkout #
 	############
 
-   export alias gco = git checkout
-	export alias gcb = git checkout -b
-   export alias gcd = git checkout develop
-   export alias gcm = git checkout main
+   abbr -a gco  git checkout
+	abbr -a gcb  git checkout -b
+   abbr -a gcd  git checkout develop
+   abbr -a gcm  git checkout main
 
 	##########
 	# commit #
@@ -40,26 +40,26 @@ if status is-interactive
 	abbr -a gcan! git commit --verbose --all --no-edit --amend
 	abbr -a gcam  git commit --all --message
 	abbr -a gcmsg git commit --message
-	abbr -a gcf  git commit --fixup=
+	abbr -a gcf   git commit --fixup=
 
 	########
 	# diff #
 	########
 
 	# s = staged (cached), w = word-diff
-	export alias gd = git diff
-   export alias gds = git diff --staged
-   export alias gdsw = git diff --staged --word-diff
-   export alias gdt = git diff-tree --no-commit-id --name-only -r
-   export alias gdup = git diff @{upstream}
-   export alias gdw = git diff --word-diff
+	abbr -a gd   git diff
+   abbr -a gds  git diff --staged
+   abbr -a gdsw git diff --staged --word-diff
+   abbr -a gdt  git diff-tree --no-commit-id --name-only -r
+   abbr -a gdup git diff @{upstream}
+   abbr -a gdw  git diff --word-diff
 
 	##########
 	# status #
 	##########
 
-   export alias gs = git status
-	export alias gss = git status --short
+   abbr -a gs  git status
+	abbr -a gss git status --short
 
 	#--- Common commands second ---#
 
@@ -67,53 +67,53 @@ if status is-interactive
    # cherry-pick #
    ###############
 
-   export alias gcp = git cherry-pick
-   export alias gcpa = git cherry-pick --abort
-   export alias gcpc = git cherry-pick --continue
+   abbr -a gcp   git cherry-pick
+   abbr -a gcpa  git cherry-pick --abort
+   abbr -a gcpc  git cherry-pick --continue
 
    #########
    # fetch #
    #########
 
-   export alias gf = git fetch
-   export alias gfo = git fetch origin
+   abbr -a gf  git fetch
+   abbr -a gfo git fetch origin
 
 	#######
 	# log #
 	#######
 
 	# g = graph, a = all, m = max-count=10, o = oneline
-	export alias gl = git log
-   export alias gls = git log --stat
-   export alias glg = git log --graph
-   export alias glga = git log --graph --decorate --all
-   export alias glgm = git log --graph --max-count=10
-   export alias glo = git log --oneline --decorate
-   export alias glog = git log --oneline --decorate --graph
-   export alias gloga = git log --oneline --decorate --graph --all
-   export alias glogm = git log --oneline --decorate --graph --max-count=10
+	abbr -a gl    git log
+   abbr -a gls   git log --stat
+   abbr -a glg   git log --graph
+   abbr -a glga  git log --graph --decorate --all
+   abbr -a glgm  git log --graph --max-count=10
+   abbr -a glo   git log --oneline --decorate
+   abbr -a glog  git log --oneline --decorate --graph
+   abbr -a gloga git log --oneline --decorate --graph --all
+   abbr -a glogm git log --oneline --decorate --graph --max-count=10
 
    #########
    # merge #
    #########
 
-   export alias gm = git merge
+   abbr -a gm  git merge
 
 	########
 	# pull #
 	########
 
-	export alias gpl = git pull
+	abbr -a gpl  git pull
 
    ##########
 	# rebase #
 	##########
 
-	export alias grb = git rebase
-	export alias grba = git rebase --abort
-	export alias grbc = git rebase --continue
-	export alias grbd = git rebase develop
-	export alias grbm = git rebase main
+	abbr -a grb   git rebase
+	abbr -a grba  git rebase --abort
+	abbr -a grbc  git rebase --continue
+	abbr -a grbd  git rebase develop
+	abbr -a grbm  git rebase main
 
 	#--- Least used last ---#
 
@@ -149,5 +149,4 @@ if status is-interactive
 	#########
 
 	abbr -a gbl  git blame -b -w
-
 end
