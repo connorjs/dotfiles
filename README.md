@@ -18,6 +18,8 @@ Testing speech.
 
 ![](./images/1F41F-8-w16.svg) [Fish]
 
+[![](./images/1F41F-8-w16.svg) Fish][fish]
+
 End testing speech.
 
 <table>
