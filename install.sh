@@ -63,6 +63,7 @@ myecho '3️⃣' 'Symlinking dotfiles...'
 # Just use stow 🤩
 stow -vt "$HOME" \
   "$DOTFILES_DIR/fish" \
+  "$DOTFILES_DIR/karabiner" \
   "$DOTFILES_DIR/kitty" \
   "$DOTFILES_DIR/lsd" \
   "$DOTFILES_DIR/node" \
