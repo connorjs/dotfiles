@@ -6,6 +6,7 @@
 brew "bat"
 brew "cowsay"
 brew "curl"
+brew "danielgtaylor/restish/restish"
 brew "fish"
 brew "fnm"
 brew "git"
