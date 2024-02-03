@@ -61,15 +61,18 @@ myecho '2️⃣' 'OS-specific setup ran 🏃‍♂️\n'
 myecho '3️⃣' 'Symlinking dotfiles...'
 
 # Just use stow 🤩
+pushd "$DOTFILES_DIR"
 stow -vt "$HOME" \
-  "$DOTFILES_DIR/fish" \
-  "$DOTFILES_DIR/karabiner" \
-  "$DOTFILES_DIR/kitty" \
-  "$DOTFILES_DIR/lsd" \
-  "$DOTFILES_DIR/node" \
-  "$DOTFILES_DIR/oh-my-posh" \
-  "$DOTFILES_DIR/vim"
-cp "$DOTFILES_DIR"/git/* "$HOME" # Prefer copy for git (credentials)
+  "fish" \
+  "karabiner" \
+  "kitty" \
+  "lsd" \
+  "node" \
+  "oh-my-posh" \
+  "vim"
+popd "$DOTFILES_DIR"
+
+cp "$DOTFILES_DIR/git/*" "$HOME" # Prefer copy for git (credentials)
 
 mkdir -p "$HOME"/bin
 cp "$DOTFILES_DIR"/bin/* "$HOME"/bin
