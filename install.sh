@@ -69,7 +69,10 @@ stow -vt "$HOME" \
   "$DOTFILES_DIR/node" \
   "$DOTFILES_DIR/oh-my-posh" \
   "$DOTFILES_DIR/vim"
-cp "$DOTFILES_DIR/git/*" "$HOME" # Prefer copy for git (credentials)
+cp "$DOTFILES_DIR"/git/* "$HOME" # Prefer copy for git (credentials)
+
+mkdir -p "$HOME"/bin
+cp "$DOTFILES_DIR"/bin/* "$HOME"/bin
 
 myecho '3️⃣' 'Dotfiles symlinked 🔗\n'
 
