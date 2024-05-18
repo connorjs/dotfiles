@@ -2,6 +2,5 @@
 kitty/.config/kitty/current-theme.conf
 kitty/.config/kitty/kitty.conf.bak
 
-# Ignore vim plugins
-vim/.config/nvim/autoload
-vim/.config/nvim/.netrwhist
+# Ignore installed autoload plugins
+vim/.config/nvim/site/autoload

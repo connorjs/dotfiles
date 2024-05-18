@@ -4,7 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [Unreleased]
+## 2024-05
+
+### Added
+
+- `lsd` color configuration
+- Proper Neovim configuration with plugins and lua-based config
+
+### Changed
+
+- Added `.editorconfig` for editing these files
+- Revamped `lsd` config including fish aliases
+- Began splitting installation scripts to allow partial runs
+
+### Removed
+
+- Removed traditional Vim in favor of only using Neovim
+
+## ???
 
 ### Added
 

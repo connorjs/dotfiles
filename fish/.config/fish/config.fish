@@ -1,19 +1,13 @@
 if status is-interactive
 	tabs -3
 
-	# CLI
-	abbr -a d  pushd
-	abbr -a cd pushd
-
-	# Vim
 	abbr -a n nvim
-	abbr -a v nvim
+	abbr -a d pushd
+	abbr -a ssh ssh -2
+	abbr -a icat kitty +kitten icat
+
 	set -gx VISUAL nvim
 	set -gx EDITOR $VISUAL
-
-	# Other
-	abbr -a ssh  ssh -2
-	abbr -a icat kitty +kitten icat
 end
 
 if test -e "$HOME/local.fish"
