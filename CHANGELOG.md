@@ -12,6 +12,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Proper Neovim configuration with plugins and lua-based config
 - Keyboard configuration via Karabiner
 - Copy `bin` files (`on-dark-mode-change`)
+- Kitty themes that use Selenized but modify background to match Precious Themes
+- Smart quote karabiner configuration (`CAPS` + one of `[];'`)
+- Other Karabiner configuration from recent usage
 
 ### Changed
 
