@@ -4,12 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## 2024-05
+## [2024-05](https://github.com/connorjs/dotfiles/compare/2023-09...HEAD)
 
 ### Added
 
 - `lsd` color configuration
 - Proper Neovim configuration with plugins and lua-based config
+- Keyboard configuration via Karabiner
+- Copy `bin` files (`on-dark-mode-change`)
 
 ### Changed
 
@@ -17,12 +19,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Revamped `lsd` config including fish aliases
 - Began splitting installation scripts to allow partial runs
 - Updated Brewfile to reflect latest needs
+- General, minor config tweaks (see commits for details)
 
 ### Removed
 
 - Removed traditional Vim in favor of only using Neovim
 
-## 2023-09
+## [2023-09](https://github.com/connorjs/dotfiles/compare/pre-changelog...2023-09)
 
 ### Added
 
@@ -48,9 +51,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - fisher (only used for nvm)
 - Custom fish prompt (replaced by Oh My Posh)
 
-## [Earlier]
+## [Earlier](https://github.com/connorjs/dotfiles/compare/d161fac...pre-changelog)
 
 No changelog was recorded prior to 2023-09.
-
-[unreleased]: https://github.com/connorjs/dotfiles/compare/pre-changelog...HEAD
-[earlier]: https://github.com/connorjs/dotfiles/compare/d161fac...pre-changelog
