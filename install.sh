@@ -1,4 +1,4 @@
-#!/bin/bash -
+#!/usr/bin/env bash
 set -euo pipefail
 IFS=$'\t\n'
 
@@ -60,19 +60,7 @@ myecho '2️⃣' 'OS-specific setup ran 🏃‍♂️\n'
 
 myecho '3️⃣' 'Symlinking dotfiles...'
 
-# Just use stow 🤩
-stow -vt "$HOME" \
-  "$DOTFILES_DIR/fish" \
-  "$DOTFILES_DIR/karabiner" \
-  "$DOTFILES_DIR/kitty" \
-  "$DOTFILES_DIR/lsd" \
-  "$DOTFILES_DIR/node" \
-  "$DOTFILES_DIR/oh-my-posh" \
-  "$DOTFILES_DIR/vim"
-cp "$DOTFILES_DIR"/git/* "$HOME" # Prefer copy for git (credentials)
-
-mkdir -p "$HOME"/bin
-cp "$DOTFILES_DIR"/bin/* "$HOME"/bin
+source "$DOTFILES_DIR"/install-3-stow.sh
 
 myecho '3️⃣' 'Dotfiles symlinked 🔗\n'
 

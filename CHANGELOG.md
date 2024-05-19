@@ -4,7 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [Unreleased]
+## 2024-05
+
+### Added
+
+- `lsd` color configuration
+- Proper Neovim configuration with plugins and lua-based config
+
+### Changed
+
+- Added `.editorconfig` for editing these files
+- Revamped `lsd` config including fish aliases
+- Began splitting installation scripts to allow partial runs
+- Updated Brewfile to reflect latest needs
+
+### Removed
+
+- Removed traditional Vim in favor of only using Neovim
+
+## 2023-09
 
 ### Added
 
@@ -20,6 +38,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Modified and added git aliases (abbreviations in fish)
 - Updated Homebrew-managed formulae, casks, and macOS apps
 - Synced fish config
+- Update bash shebang to `#!/usr/bin/env bash`
 
 ### Removed
 

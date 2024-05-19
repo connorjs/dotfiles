@@ -2,29 +2,35 @@
 
 # Possible values: permission, user, group, context, size, date, name, inode, links, git
 blocks:
-  - date
-  - user
   - size
   - name
 # Also note: `-g` to show git
 
-# 2023-09-24 09:34:00
-date: '+%Y-%m-%d %H:%M:%S'
+color:
+  theme: custom
+
+date: relative
+# 2023-09-24 09:34
+# date: '+%Y-%m-%d %H:%M'
 
 # Ignores that simplify tree view
 ignore-globs:
   - .idea
   - .git
+  - bin
   - build
   - coverage
   - dist
   - node_modules
+  - obj
+  - TestResults
+  - test-results
 
 # Shows `dir/` and `executable*` with indicators
 indicators: true
 
 # Options: `grid`, `oneline` (one-per-line), and `tree`
-layout: oneline
+layout: grid
 
 recursion:
   enabled: false # applies to `grid` and `oneline`

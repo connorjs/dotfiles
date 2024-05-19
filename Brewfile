@@ -4,7 +4,6 @@
 # Binaries
 # Keep in sync with README table!
 brew "bat"
-brew "cowsay"
 brew "curl"
 brew "danielgtaylor/restish/restish"
 brew "fish"
@@ -13,28 +12,23 @@ brew "git"
 brew "git-delta"
 brew "imagemagick"
 brew "jq"
-brew "lolcat"
 brew "lsd"
 brew "nvim"
 brew "oh-my-posh"
 brew "stow"
 
 # Fonts
-tap "homebrew/cask-fonts" if OS.mac?
 cask "font-jetbrains-mono-nerd-font", args: { fontdir: "/Library/Fonts" }
 
 # macOS apps
 cask_args appdir: "/Applications", require_sha: true
 cask "1password"
+cask "1password-cli"
 cask "alfred"
-cask "authy"
-cask "firefox"
 cask "flux" # Settings: Halogen, Tungsten, Candle
 cask "jetbrains-toolbox"
-cask "microsoft-edge"
 cask "rocket" # Settings: :: as trigger
 cask "visual-studio-code"
-cask "xpra"
 
 # macOS App Store
 brew "mas" if OS.mac?
