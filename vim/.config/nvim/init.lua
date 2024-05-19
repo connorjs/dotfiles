@@ -2,6 +2,7 @@ vim.cmd.colorscheme("vim") -- Uses terminal background color to prevent flash
 
 vim.opt.encoding = "utf-8"
 vim.opt.tabstop = 3
+vim.opt.shiftwidth = 3 -- Same as tabstop
 vim.opt.number = true
 
 -- Don’t show the mode, since it"s already in the status line

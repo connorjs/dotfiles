@@ -112,8 +112,10 @@ if status is-interactive
 	abbr -a grb   git rebase
 	abbr -a grba  git rebase --abort
 	abbr -a grbc  git rebase --continue
+	abbr -a grbi  git rebase --interactive
 	abbr -a grbd  git rebase develop
 	abbr -a grbm  git rebase main
+	abbr -a grbms git rebase master
 
 	#--- Least used last ---#
 
