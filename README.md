@@ -113,12 +113,14 @@ _See [§ Workspaces](#workspaces) for why I use the `~/w/connorjs` path._
 ## Terminal
 
 I use [Kitty] (a fast, feature-rich, GPU based terminal emulator) with
-[Selenized] (Solarized redesigned) color schemes (Light and Black). The
+[Selenized] (Solarized redesigned) color schemes (Warm and Black). The
 [on-dark-mode-change](./bin/on-dark-mode-change) script syncs the Kitty theme
 with the System preference.
 
 I have programmed the F6 media key to toggle between light and dark mode (the
 key has a moon on it; its original function is Do not Disturb).
+
+Follow [kitty-icon](https://github.com/DinkDonk/kitty-icon) to change the macOS application icon.
 
 <div align="right">(<a href="#readme-top">back to top</a>)</div>
 
