@@ -4,7 +4,7 @@
 
 # connorjs dotfiles
 
-Mac and Windows. Multiple shells. Same tools. One install script.
+Mac and Windows. Multiple shells. Same tools. One `install` script.
 
 ## Highlights
 

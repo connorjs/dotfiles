@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\t\n'
 
 if [[ "$DARKMODE" -eq 1 ]]; then
 	/Applications/kitty.app/Contents/MacOS/kitty +kitten themes --reload-in=all Selenized\ Black

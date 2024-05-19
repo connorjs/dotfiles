@@ -7,13 +7,13 @@ DOTFILES_DIR=$(dirname "$0")
 # Just use stow 🤩
 pushd "$DOTFILES_DIR"
 stow -vt "$HOME" \
-  fish \
-  karabiner \
-  kitty \
-  lsd \
-  node \
-  oh-my-posh \
-  vim
+	fish \
+	karabiner \
+	kitty \
+	lsd \
+	node \
+	oh-my-posh \
+	vim
 popd
 
 # Prefer copy for git (credentials), do not overwrite

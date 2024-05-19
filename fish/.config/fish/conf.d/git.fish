@@ -13,7 +13,7 @@ if status is-interactive
 	abbr -a gb   git branch
 	abbr -a gba  git branch --all
 	abbr -a gbd  git branch --delete
-	abbr -a gbda 'git branch --no-color --merged | grep -vE \'^([+]|\s*(main|develop|master)\s*$)\' | xargs git branch -d 2>/dev/null'
+	abbr -a gbda git branch --no-color --merged | grep -vE '^([+]|\s*(main|develop|master)\s*$)' | xargs git branch -d 2>/dev/null
 	abbr -a gbD  git branch --delete --force
 	abbr -a gbnm git branch --no-merged
 	abbr -a gbr  git branch --remote
@@ -22,10 +22,10 @@ if status is-interactive
 	# checkout #
 	############
 
-   abbr -a gco  git checkout
+	abbr -a gco  git checkout
 	abbr -a gcb  git checkout -b
-   abbr -a gcd  git checkout develop
-   abbr -a gcm  git checkout main
+	abbr -a gcd  git checkout develop
+	abbr -a gcm  git checkout main
 
 	##########
 	# commit #
@@ -48,35 +48,35 @@ if status is-interactive
 
 	# s = staged (cached), w = word-diff
 	abbr -a gd   git diff
-   abbr -a gds  git diff --staged
-   abbr -a gdsw git diff --staged --word-diff
-   abbr -a gdt  git diff-tree --no-commit-id --name-only -r
-   abbr -a gdup git diff @{upstream}
-   abbr -a gdw  git diff --word-diff
+	abbr -a gds  git diff --staged
+	abbr -a gdsw git diff --staged --word-diff
+	abbr -a gdt  git diff-tree --no-commit-id --name-only -r
+	abbr -a gdup git diff @{upstream}
+	abbr -a gdw  git diff --word-diff
 
 	##########
 	# status #
 	##########
 
-   abbr -a gs  git status
+	abbr -a gs  git status
 	abbr -a gss git status --short
 
 	#--- Common commands second ---#
 
-   ###############
-   # cherry-pick #
-   ###############
+	###############
+	# cherry-pick #
+	###############
 
-   abbr -a gcp   git cherry-pick
-   abbr -a gcpa  git cherry-pick --abort
-   abbr -a gcpc  git cherry-pick --continue
+	abbr -a gcp   git cherry-pick
+	abbr -a gcpa  git cherry-pick --abort
+	abbr -a gcpc  git cherry-pick --continue
 
-   #########
-   # fetch #
-   #########
+	#########
+	# fetch #
+	#########
 
-   abbr -a gf  git fetch
-   abbr -a gfo git fetch origin
+	abbr -a gf  git fetch
+	abbr -a gfo git fetch origin
 
 	#######
 	# log #
@@ -84,20 +84,20 @@ if status is-interactive
 
 	# g = graph, a = all, m = max-count=10, o = oneline
 	abbr -a gl    git log
-   abbr -a gls   git log --stat
-   abbr -a glg   git log --graph
-   abbr -a glga  git log --graph --decorate --all
-   abbr -a glgm  git log --graph --max-count=10
-   abbr -a glo   git log --oneline --decorate
-   abbr -a glog  git log --oneline --decorate --graph
-   abbr -a gloga git log --oneline --decorate --graph --all
-   abbr -a glogm git log --oneline --decorate --graph --max-count=10
+	abbr -a gls   git log --stat
+	abbr -a glg   git log --graph
+	abbr -a glga  git log --graph --decorate --all
+	abbr -a glgm  git log --graph --max-count=10
+	abbr -a glo   git log --oneline --decorate
+	abbr -a glog  git log --oneline --decorate --graph
+	abbr -a gloga git log --oneline --decorate --graph --all
+	abbr -a glogm git log --oneline --decorate --graph --max-count=10
 
-   #########
-   # merge #
-   #########
+	#########
+	# merge #
+	#########
 
-   abbr -a gm  git merge
+	abbr -a gm  git merge
 
 	########
 	# pull #
@@ -105,7 +105,7 @@ if status is-interactive
 
 	abbr -a gpl  git pull
 
-   ##########
+	##########
 	# rebase #
 	##########
 

@@ -117,5 +117,5 @@ require("lazy").setup({
 	"nvim-treesitter/nvim-treesitter-context",
 
 	-- Auto close tags
-	"windwp/nvim-ts-autotag"
+	"windwp/nvim-ts-autotag",
 })
