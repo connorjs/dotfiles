@@ -23,6 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Began splitting installation scripts to allow partial runs
 - Updated Brewfile to reflect latest needs
 - General, minor config tweaks (see commits for details)
+- Tweaked command line prompt (timing and status code are now on hrule line to bring them closer to previous command)
 
 ### Removed
 
