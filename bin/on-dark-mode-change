@@ -3,7 +3,20 @@ set -euo pipefail
 IFS=$'\t\n'
 
 if [[ "$DARKMODE" -eq 1 ]]; then
-	/Applications/kitty.app/Contents/MacOS/kitty +kitten themes --reload-in=all Selenized\ Dark11
+	kittyTheme='Selenized Dark11'
+	wallpaper="$HOME/.wallpaper/dark.png"
 else
-	/Applications/kitty.app/Contents/MacOS/kitty +kitten themes --reload-in=all Selenized\ Warm
+	kittyTheme='Selenized Warm'
+	wallpaper="$HOME/.wallpaper/light.png"
 fi
+
+/Applications/kitty.app/Contents/MacOS/kitty +kitten themes --reload-in=all "$kittyTheme"
+
+/usr/libexec/PlistBuddy -c \
+	"set AllSpacesAndDisplays:Desktop:Content:Choices:0:Files:o:relative file:///$wallpaper" \
+	"$HOME/Library/Application Support/com.apple.wallpaper/Store/Index.plist" \
+&& killall WallpaperAgent && \
+/usr/libexec/PlistBuddy -c \
+	"set SystemDefault:Desktop:Content:Choices:0:Files:o:relative file:///$wallpaper" \
+	"$HOME/Library/Application Support/com.apple.wallpaper/Store/Index.plist"
+

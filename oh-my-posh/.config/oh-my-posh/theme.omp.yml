@@ -9,13 +9,11 @@ blocks:
         style: plain
         foreground: default
         template: "{{ .Env.HRULE80 }}"
-      - type: executiontime
-        style: plain
-        foreground: default
       - type: status
         style: plain
         foreground: red
         template: " [{{ .Code }}]" # add brackets
+      - type: executiontime
       - type: text
         style: plain
         template: "\n" # blank line
