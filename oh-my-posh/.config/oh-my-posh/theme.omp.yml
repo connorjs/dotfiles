@@ -1,51 +1,59 @@
-$schema: "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
-version: 2
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version: 3
 blocks:
-  # Horizontal line
-  - alignment: left
-    type: prompt
+  - type: prompt
+    alignment: left
     segments:
-      - type: text
-        style: plain
-        foreground: default
+      - properties:
+          cache_duration: none
         template: "{{ .Env.HRULE80 }}"
-      - type: status
+        foreground: default
+        type: text
         style: plain
+      - properties:
+          cache_duration: none
+        template: " [{{ .Code }}]"
         foreground: red
-        template: " [{{ .Code }}]" # add brackets
-      - type: executiontime
-      - type: text
+        type: status
         style: plain
-        template: "\n" # blank line
-  # Main prompt line
-  - alignment: left
-    type: prompt
-    newline: true
+      - properties:
+          cache_duration: none
+        type: executiontime
+        style: plain
+      - properties:
+          cache_duration: none
+        template: |
+
+        type: text
+        style: plain
+  - type: prompt
+    alignment: left
     segments:
-      - type: path
-        style: plain
-        foreground: green
-        template: "{{ .Path }} " # remove leading space (keep trailing space)
-        properties:
+      - properties:
+          cache_duration: none
           style: full
-      - type: git
+        template: "{{ .Path }} "
+        foreground: green
+        type: path
         style: plain
-        foreground: default
-        template: > # default (re-formatted for YAML; new lines = spaces)
-          <yellow>({{ .HEAD }})</>
-          {{- if .BranchStatus }} {{ .BranchStatus }}{{ end }}
-          <magenta>{{ .Commit.Subject }}</>
-          {{ .Working }}
-        properties:
-          branch_icon: ""
+      - properties:
           branch_gone_icon: ""
+          branch_icon: ""
+          cache_duration: none
           fetch_status: true
-  # Single character on command entry line
-  - alignment: left
-    type: prompt
-    newline: true
-    segments:
-      - type: text
-        style: plain
+        template: <yellow>({{ .HEAD }})</> {{- if .BranchStatus }} {{ .BranchStatus }}{{ end }} <magenta>{{ .Commit.Subject }}</> {{ .Working }}
         foreground: default
-        template: "{{ if .Root }}#{{ else }}❯{{ end }} " # include trailing space
+        type: git
+        style: plain
+    newline: true
+  - type: prompt
+    alignment: left
+    segments:
+      - properties:
+          cache_duration: none
+        template: "{{ if .Root }}#{{ else }}❯{{ end }} "
+        foreground: default
+        type: text
+        style: plain
+    newline: true
