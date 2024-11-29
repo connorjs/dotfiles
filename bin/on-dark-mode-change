@@ -2,6 +2,17 @@
 set -euo pipefail
 IFS=$'\t\n'
 
+# If `DARKMODE` is not set, read it from system
+if [[ -z "${DARKMODE+x}" ]]; then
+	current_mode=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
+	if [[ "$current_mode" == "Dark" ]]; then
+		DARKMODE=1
+	else
+	 	DARKMODE=0
+	fi
+fi
+
+# Set dark/light mode values
 if [[ "$DARKMODE" -eq 1 ]]; then
 	kittyTheme='Selenized Dark11'
 	wallpaper="$HOME/.wallpaper/dark.png"
@@ -10,13 +21,22 @@ else
 	wallpaper="$HOME/.wallpaper/light.png"
 fi
 
+# Reload Kitty (terminal) theme
 /Applications/kitty.app/Contents/MacOS/kitty +kitten themes --reload-in=all "$kittyTheme"
 
-/usr/libexec/PlistBuddy -c \
-	"set AllSpacesAndDisplays:Desktop:Content:Choices:0:Files:o:relative file:///$wallpaper" \
-	"$HOME/Library/Application Support/com.apple.wallpaper/Store/Index.plist" \
-&& killall WallpaperAgent && \
-/usr/libexec/PlistBuddy -c \
-	"set SystemDefault:Desktop:Content:Choices:0:Files:o:relative file:///$wallpaper" \
-	"$HOME/Library/Application Support/com.apple.wallpaper/Store/Index.plist"
+# Set Wallpaper
+wallpaperPlist="$HOME/Library/Application Support/com.apple.wallpaper/Store/Index.plist"
 
+# 1. Set the default desktop choice
+/usr/libexec/PlistBuddy -c "set SystemDefault:Desktop:Content:Choices:0:Files:0:relative file:///$wallpaper" "$wallpaperPlist"
+
+# 2. Set the wallpaper with "all spaces"
+
+# 2a. Set the provider to be custom choice
+/usr/libexec/PlistBuddy -c "set AllSpacesAndDisplays:Desktop:Content:Choices:0:Provider com.apple.wallpaper.choice.image" "$wallpaperPlist"
+
+# 2b. Set the file path
+/usr/libexec/PlistBuddy -c	"set AllSpacesAndDisplays:Desktop:Content:Choices:0:Files:0:relative file:///$wallpaper" "$wallpaperPlist"
+
+# 3. Kill the agent to force the change
+killall WallpaperAgent
