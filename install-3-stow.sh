@@ -11,7 +11,7 @@ stow -vt "$HOME" \
 	karabiner \
 	kitty \
 	lsd \
-	node \
+	mise \
 	oh-my-posh \
 	vim
 popd

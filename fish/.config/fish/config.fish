@@ -3,6 +3,7 @@ if status is-interactive
 
 	abbr -a n nvim
 	abbr -a d pushd
+	abbr -a pn pnpm
 	abbr -a ssh ssh -2
 	abbr -a icat kitty +kitten icat
 
