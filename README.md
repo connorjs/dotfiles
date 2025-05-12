@@ -74,6 +74,9 @@ PowerShell?
 > 2. Full system configuration (beyond the terminal)
 >
 > [Browse the last stable version](https://github.com/connorjs/dotfiles/tree/pre-changelog).
+>
+> I still have not updated this README nor confirmed the install scripts (May 11, 2025).
+> I continue to edit my `.dotfiles` with my configuration, but I do not guarantee a one-run install.
 
 ## About
 
