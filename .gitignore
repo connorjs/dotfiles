@@ -1,5 +1,8 @@
 .idea/
 
+# Ignore per-machine fish files
+fish/.config/fish/fish_variables
+
 # Ignore karabiner backups
 karabiner/.config/karabiner/automatic_backups/
 
