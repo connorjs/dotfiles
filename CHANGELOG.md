@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [2024-11](https://github.com/connorjs/dotfiles/compare/2024-05...HEAD)
+## [2025-05](https://github.com/connorjs/dotfiles/compare/2025-05...HEAD)
+
+- Use [mise](https://mise.jdx.dev) to manage tool versions.
+  - Removes fnm.
+  - Replaces `.node-version` with general `.tool-versions`.
+  - Adds language base for my needs.
+  - Node 24.
+  - Does NOT include .NET ([download .NET](https://dotnet.microsoft.com/en-us/download)).
+- Remove `fish_variables` which causes per-machine conflicts.
+
+## [2024-11](https://github.com/connorjs/dotfiles/compare/2024-05...2025-05)
 
 ### Changed
 
