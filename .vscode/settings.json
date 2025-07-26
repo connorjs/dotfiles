@@ -1,0 +1,53 @@
+{
+	"[csharp]": {
+		"editor.defaultFormatter": "csharpier.csharpier-vscode"
+	},
+	"[typespec]": {
+		"editor.defaultFormatter": "typespec.typespec-vscode"
+	},
+	"debug.console.fontSize": 14,
+	"debug.terminal.clearBeforeReusing": true,
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit"
+	},
+	"editor.codeLens": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.fontFamily": "JetBrainsMono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 16,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
+	"editor.minimap.enabled": false,
+	"editor.scrollBeyondLastLine": false,
+	"editor.tabSize": 2,
+	"editor.useTabStops": false,
+	"editor.wordWrap": "bounded",
+	"editor.wordWrapColumn": 100,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"explorer.fileNesting.enabled": true,
+	"files.autoSave": "onFocusChange",
+	"markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Open Sans', 'Droid Sans', sans-serif",
+	"markdown.preview.fontSize": 16,
+	"npm.scriptHover": false,
+	"plantuml.exportFormat": "svg",
+	"plantuml.render": "Local",
+	"plantuml.urlFormat": "svg",
+	"plantuml.urlResult": "SimpleURL",
+	"telemetry.telemetryLevel": "off",
+	"terminal.external.osxExec": "Kitty.app",
+	"terminal.integrated.fontSize": 14,
+	"window.autoDetectColorScheme": true,
+	"window.newWindowDimensions": "inherit",
+	"window.openFoldersInNewWindow": "on",
+	"window.zoomLevel": 0.8,
+	"window.zoomPerWindow": false,
+	"workbench.activityBar.location": "top",
+	"workbench.colorTheme": "Precious Light Warm",
+	"workbench.editor.closeOnFileDelete": true,
+	"workbench.iconTheme": "a-file-icon-vscode",
+	"workbench.preferredLightColorTheme": "Precious Light Warm",
+	"workbench.preferredDarkColorTheme": "Precious Dark Eleven"
+}
