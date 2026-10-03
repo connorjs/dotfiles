@@ -16,11 +16,12 @@ A ground-up reset for macOS only (home and work).
   - `.chezmoiremove` cleans up the stow-era symlinks.
 - Replace Oh My Posh with [Starship](https://starship.rs), ported from the old theme.
 - Replace kitty with [Ghostty](https://ghostty.org), using its built-in light/dark themes.
+- Add `./test.sh` to validate the repo without touching `~`.
 - Strip Neovim down to a plain editor: options only, no plugins.
-- Make mise the only runtime manager (replaces fnm and direnv), including .NET 10.
+- Make mise the only runtime manager (replaces fnm and direnv), including .NET (always the latest release). Drops Ruby.
 - Move fish universal variables (PATH, telemetry opt-outs) into a tracked, machine-agnostic `config.fish`.
 - Move git ignore and attributes to `~/.config/git/`, and track the full `.gitconfig`.
-- Add `fd`, `fzf`, `zoxide`, `uv`, and other daily CLI tools to the Brewfile.
+- Add `fd`, `fzf`, `zoxide`, `uv`, PowerShell 7, tilt, and other daily CLI tools to the Brewfile.
 - Set TextEdit's plain-text font to JetBrains Mono NFM 18.
 
 ### Removed

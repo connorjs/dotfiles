@@ -45,6 +45,7 @@ macOS at home and at work. One [chezmoi][chezmoi] repo.
 | Add a brew package                 | Add it to `home/dot_Brewfile`, then `chezmoi apply`   |
 | Change a runtime version           | Edit `home/dot_config/mise/config.toml`, then `apply` |
 | Pull changes from the other Mac    | `chezmoi update`                                      |
+| Check the repo before applying     | `./test.sh` (renders into throwaway homes, never `~`) |
 
 The Brewfile, mise config, and macOS defaults re-run automatically when they change.
 
