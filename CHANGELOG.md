@@ -4,7 +4,30 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [2025-05](https://github.com/connorjs/dotfiles/compare/2025-05...HEAD)
+## [2026-10](https://github.com/connorjs/dotfiles/compare/2025-05...HEAD)
+
+A ground-up reset for macOS only (home and work).
+
+### Changed
+
+- Replace stow and the install scripts with [chezmoi](https://www.chezmoi.io).
+  - Templates for work vs. home (git email, commit signing, corporate CA).
+  - The Brewfile, `mise install`, and macOS defaults re-run automatically when they change.
+  - `.chezmoiremove` cleans up the stow-era symlinks.
+- Replace Oh My Posh with [Starship](https://starship.rs), ported from the old theme.
+- Replace kitty with [Ghostty](https://ghostty.org), using its built-in light/dark themes.
+- Strip Neovim down to a plain editor: options only, no plugins.
+- Make mise the only runtime manager (replaces fnm and direnv), including .NET 10.
+- Move fish universal variables (PATH, telemetry opt-outs) into a tracked, machine-agnostic `config.fish`.
+- Move git ignore and attributes to `~/.config/git/`, and track the full `.gitconfig`.
+- Add `fd`, `fzf`, `zoxide`, `uv`, and other daily CLI tools to the Brewfile.
+- Set TextEdit's plain-text font to JetBrains Mono NFM 18.
+
+### Removed
+
+- Windows plans, Karabiner, kitty, the dark-mode-change script, VS Code.
+
+## [2025-05](https://github.com/connorjs/dotfiles/compare/2024-11...2025-05)
 
 - Use [mise](https://mise.jdx.dev) to manage tool versions.
   - Removes fnm.

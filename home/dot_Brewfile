@@ -1,0 +1,50 @@
+# Brewfile - Keep each section alphabetical
+# Applied by chezmoi (.chezmoiscripts) whenever this file changes.
+# Language runtimes (node, dotnet, python, ...) live in mise, not here.
+
+# CLI
+brew "bat"
+brew "chezmoi"
+brew "curl"
+brew "fd"
+brew "fish"
+brew "fzf"
+brew "gh"
+brew "git"
+brew "git-delta"
+brew "jq"
+brew "just"
+brew "lsd"
+brew "mise"
+brew "neovim"
+brew "ripgrep"
+brew "shellcheck"
+brew "shfmt"
+brew "starship"
+brew "uv"
+brew "wget"
+brew "worktrunk"
+brew "zoxide"
+
+# Fonts
+cask "font-jetbrains-mono-nerd-font"
+
+# macOS apps
+cask_args appdir: "/Applications", require_sha: true
+cask "1password"
+cask "1password-cli"
+cask "alfred"
+cask "flux-app" # Settings: Halogen, Tungsten, Candle
+cask "ghostty"
+cask "jetbrains-toolbox"
+cask "rocket" # Settings: :: as trigger
+
+# macOS App Store (sign in to the App Store first)
+brew "mas"
+mas "1Password for Safari", id: 1569813296
+mas "Clocker", id: 1056643111
+mas "Dark Reader for Safari", id: 1438243180
+mas "Endel", id: 1484348796
+mas "Live Home 3D Pro: Design House", id: 1066145115
+mas "Magnet", id: 441258766
+mas "Speedtest by Ookla", id: 1153157709

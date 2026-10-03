@@ -1,0 +1,48 @@
+# Homebrew first so everything below can find its tools (also for non-interactive shells)
+/opt/homebrew/bin/brew shellenv fish | source
+
+# PATH: `fish_add_path` skips directories that do not exist, so keep the list machine-agnostic
+fish_add_path --global \
+	~/bin \
+	~/.local/bin \
+	~/.cargo/bin \
+	~/.dotnet/tools \
+	~/.aspire/bin \
+	~/.antigravity-ide/antigravity-ide/bin \
+	/opt/homebrew/opt/curl/bin
+
+set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
+set -gx TESTINGPLATFORM_TELEMETRY_OPTOUT 1
+set -gx HOMEBREW_NO_AUTO_UPDATE 1
+set -gx FORCE_COLOR 1
+set -gx FORCE_HYPERLINK 1
+{{- if .work }}
+
+# Work: corporate CA (additive to Node's bundled CAs)
+set -gx NODE_EXTRA_CA_CERTS ~/certs/tql.pem
+{{- end }}
+
+set -gx VISUAL nvim
+set -gx EDITOR $VISUAL
+
+if status is-interactive
+	tabs -3
+
+	abbr -a n nvim
+	abbr -a d pushd
+	abbr -a pn pnpm
+	abbr -a cm chezmoi
+
+	mise activate fish | source
+	zoxide init fish | source
+	fzf --fish | source
+	starship init fish | source
+else
+	# IDEs and scripts get mise tools via shims
+	mise activate fish --shims | source
+end
+
+# Untracked, per-machine escape hatch
+if test -e ~/.config/fish/local.fish
+	source ~/.config/fish/local.fish
+end

@@ -1,0 +1,51 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+# Ported from my Oh My Posh theme:
+#   ———————————————————— [status] duration
+#   ~/path (branch) ⇡1!2 subject
+#   ❯
+format = """
+$fill$status$cmd_duration
+$directory$git_branch$git_state$git_status${custom.git_subject}
+$character"""
+
+add_newline = false
+
+[fill]
+symbol = "—"
+style = "default"
+
+[status]
+disabled = false
+format = "[\\[$status\\]]($style) "
+style = "red"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "default"
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+style = "green"
+truncation_length = 0
+truncate_to_repo = false
+
+[git_branch]
+format = "[\\($branch\\)]($style) "
+style = "yellow"
+
+[git_status]
+format = "([$ahead_behind$all_status]($style) )"
+style = "default"
+
+[custom.git_subject]
+command = "git log -1 --format=%s"
+require_repo = true
+when = true
+shell = ["sh"]
+format = "[$output]($style) "
+style = "purple"
+
+[character]
+success_symbol = "❯"
+error_symbol = "❯"

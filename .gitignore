@@ -1,11 +1,1 @@
 .idea/
-
-# Ignore per-machine fish files
-fish/.config/fish/fish_variables
-
-# Ignore karabiner backups
-karabiner/.config/karabiner/automatic_backups/
-
-# Ignore always-changing Kitty files
-kitty/.config/kitty/current-theme.conf
-kitty/.config/kitty/kitty.conf.bak

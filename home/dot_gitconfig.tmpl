@@ -1,0 +1,68 @@
+[user]
+	name = {{ .name }}
+	email = {{ .email }}
+{{- if not .work }}
+	signingKey = ~/.ssh/github-commits.pub
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+	gpgsign = true
+{{- end }}
+
+[init]
+	defaultBranch = main
+
+[core]
+	autocrlf = input
+	editor = nvim
+	# https://github.com/dandavison/delta/issues/447#issuecomment-1239398586
+	pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark || echo light)"
+
+[interactive]
+	diffFilter = delta --color-only
+
+[merge]
+	conflictstyle = zdiff3
+
+# https://git-scm.com/docs/gitattributes#_defining_a_custom_merge_driver
+[merge "theirs"]
+	name = Keep upstream changes
+	driver = cp -f "%B" "%A"
+
+[pull]
+	rebase = true
+
+[push]
+	default = upstream
+	autoSetupRemote = true
+
+[rebase]
+	autoSquash = true
+
+[alias]
+	# Assumes `main` branch
+	recent = "!r() { refbranch=$1 count=$2; git for-each-ref --sort=-committerdate refs/heads --format='%(refname:short)|%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always --count=${count:-20} | while read line; do branch=$(echo \"$line\" | awk 'BEGIN { FS = \"|\" }; { print $1 }' | tr -d '*'); ahead=$(git rev-list --count \"${refbranch:-origin/main}..${branch}\"); behind=$(git rev-list --count \"${branch}..${refbranch:-origin/main}\"); colorline=$(echo \"$line\" | sed 's/^[^|]*|//'); echo \"$ahead|$behind|$colorline\" | awk -F'|' -vOFS='|' '{$5=substr($5,1,70)}1' ; done | ( echo \"ahead|behind||branch|lastcommit|message|author\\n\" && cat) | column -ts'|';}; r"
+
+#--- Tool specific ---#
+
+[delta]
+	navigate = true # use n and N to move between diff sections
+	side-by-side = false
+	tabs = 3
+
+[delta "light"]
+	light = true
+	syntax-theme = GitHub
+
+[delta "dark"]
+	light = false
+	syntax-theme = ansi
+
+# Git ignores includes that do not exist, so this is safe on every machine
+[includeIf "gitdir:~/w/ConnorSullivan_TQL/"]
+	path = ~/.gitconfig-tql-github

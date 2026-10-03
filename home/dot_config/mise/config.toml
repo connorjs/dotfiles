@@ -1,0 +1,17 @@
+# Global defaults. Projects pick versions from the files they already commit
+# (.nvmrc, .node-version, global.json, .python-version, ...), so teams never
+# need to adopt mise. Personal per-project pins go in a git-ignored mise.local.toml.
+
+[tools]
+bun = "latest"
+deno = "latest"
+dotnet = "10"
+go = "latest"
+java = "temurin-21"
+node = "lts"
+pnpm = "latest"
+python = "3.14"
+ruby = "3.4"
+
+[settings]
+idiomatic_version_file_enable_tools = ["dotnet", "node", "python", "ruby"]
