@@ -37,15 +37,15 @@ macOS at home and at work. One [chezmoi][chezmoi] repo.
 
 ## Day to day
 
-| I want to…                         | Run                                                   |
-| ---------------------------------- | ----------------------------------------------------- |
-| Change a dotfile                   | Edit it under `home/`, then `chezmoi apply` (`cm`)    |
-| Preview what apply would change    | `chezmoi diff`                                        |
-| Keep a change an app made itself   | `chezmoi re-add`                                      |
-| Add a brew package                 | Add it to `home/dot_Brewfile`, then `chezmoi apply`   |
-| Change a runtime version           | Edit `home/dot_config/mise/config.toml`, then `apply` |
-| Pull changes from the other Mac    | `chezmoi update`                                      |
-| Check the repo before applying     | `./test.sh` (renders into throwaway homes, never `~`) |
+| I want to…                       | Run                                                   |
+| -------------------------------- | ----------------------------------------------------- |
+| Change a dotfile                 | Edit it under `home/`, then `chezmoi apply` (`cm`)    |
+| Preview what apply would change  | `chezmoi diff`                                        |
+| Keep a change an app made itself | `chezmoi re-add`                                      |
+| Add a brew package               | Add it to `home/dot_Brewfile`, then `chezmoi apply`   |
+| Change a runtime version         | Edit `home/dot_config/mise/config.toml`, then `apply` |
+| Pull changes from the other Mac  | `chezmoi update`                                      |
+| Check the repo before applying   | `./test.sh` (renders into throwaway homes, never `~`) |
 
 The Brewfile, mise config, and macOS defaults re-run automatically when they change.
 
@@ -53,18 +53,18 @@ The Brewfile, mise config, and macOS defaults re-run automatically when they cha
 
 `.chezmoiroot` points chezmoi at `home/`, which mirrors `~`.
 
-| Path                         | What                                                            |
-| ---------------------------- | --------------------------------------------------------------- |
-| `home/.chezmoi.toml.tmpl`    | Per-machine data: `work`, `name`, `email`                       |
-| `home/.chezmoiscripts/`      | Brew bundle, login shell, `mise install`, macOS defaults        |
-| `home/.chezmoiremove`        | Old files to delete (stow-era symlinks, kitty, Karabiner)       |
-| `home/dot_Brewfile`          | CLI tools and apps (no language runtimes)                       |
-| `home/dot_config/fish/`      | fish config and abbreviations (`config.fish.tmpl` has work bits) |
-| `home/dot_config/ghostty/`   | Terminal                                                        |
-| `home/dot_config/mise/`      | Global runtime versions                                         |
-| `home/dot_config/nvim/`      | Plain Neovim, no plugins                                        |
-| `home/dot_config/starship.toml` | Prompt                                                       |
-| `home/dot_gitconfig.tmpl`    | git (commit signing only at home)                               |
+| Path                            | What                                                             |
+| ------------------------------- | ---------------------------------------------------------------- |
+| `home/.chezmoi.toml.tmpl`       | Per-machine data: `work`, `name`, `email`                        |
+| `home/.chezmoiscripts/`         | Brew bundle, login shell, `mise install`, macOS defaults         |
+| `home/.chezmoiremove`           | Old files to delete (stow-era symlinks, kitty, Karabiner)        |
+| `home/dot_Brewfile`             | CLI tools and apps (no language runtimes)                        |
+| `home/dot_config/fish/`         | fish config and abbreviations (`config.fish.tmpl` has work bits) |
+| `home/dot_config/ghostty/`      | Terminal                                                         |
+| `home/dot_config/mise/`         | Global runtime versions                                          |
+| `home/dot_config/nvim/`         | Plain Neovim, no plugins                                         |
+| `home/dot_config/starship.toml` | Prompt                                                           |
+| `home/dot_gitconfig.tmpl`       | git (commit signing only at home)                                |
 
 ## Machine differences
 
