@@ -1,0 +1,16 @@
+# Leftovers from the stow era (dangling symlinks into the old repo layout)
+.gitattributes
+.gitignore
+.tool-versions
+.vimrc
+bin/on-dark-mode-change
+.config/oh-my-posh
+
+# Ghostty config moved to ~/.config/ghostty/config.ghostty
+Library/Application Support/com.mitchellh.ghostty/config.ghostty
+
+# Retired: kitty, Karabiner, and the dark-mode-notify agent that re-themed kitty
+.config/karabiner
+.config/kitty
+bin/dark-mode-notify
+Library/LaunchAgents/ke.bou.dark-mode-notify.plist

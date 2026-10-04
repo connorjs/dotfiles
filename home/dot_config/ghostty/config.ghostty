@@ -1,0 +1,4 @@
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 18
+theme = light:Terminal Basic,dark:GitHub Dark High Contrast
+confirm-close-surface = false

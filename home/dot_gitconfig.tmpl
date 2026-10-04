@@ -1,0 +1,57 @@
+[user]
+	name = {{ .name }}
+	email = {{ .email }}
+{{- if .signCommits }}
+	signingKey = ~/.ssh/github-commits.pub
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+	gpgsign = true
+{{- end }}
+
+[init]
+	defaultBranch = main
+
+[core]
+	autocrlf = input
+	editor = nvim
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[merge]
+	conflictstyle = zdiff3
+
+# https://git-scm.com/docs/gitattributes#_defining_a_custom_merge_driver
+[merge "theirs"]
+	name = Keep upstream changes
+	driver = cp -f "%B" "%A"
+
+[pull]
+	rebase = true
+
+[push]
+	default = upstream
+	autoSetupRemote = true
+
+[rebase]
+	autoSquash = true
+
+[alias]
+	# Assumes `main` branch
+	recent = "!r() { refbranch=$1 count=$2; git for-each-ref --sort=-committerdate refs/heads --format='%(refname:short)|%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' --color=always --count=${count:-20} | while read line; do branch=$(echo \"$line\" | awk 'BEGIN { FS = \"|\" }; { print $1 }' | tr -d '*'); ahead=$(git rev-list --count \"${refbranch:-origin/main}..${branch}\"); behind=$(git rev-list --count \"${branch}..${refbranch:-origin/main}\"); colorline=$(echo \"$line\" | sed 's/^[^|]*|//'); echo \"$ahead|$behind|$colorline\" | awk -F'|' -vOFS='|' '{$5=substr($5,1,70)}1' ; done | ( echo \"ahead|behind||branch|lastcommit|message|author\\n\" && cat) | column -ts'|';}; r"
+
+#--- Tool specific ---#
+
+[delta]
+	navigate = true # use n and N to move between diff sections
+	side-by-side = false
+	tabs = 3
+	# ANSI colors follow the terminal palette; delta (0.18+) detects light/dark from the terminal itself
+	syntax-theme = ansi
