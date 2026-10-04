@@ -3,11 +3,9 @@
 # need to adopt mise. Personal per-project pins go in a git-ignored mise.local.toml.
 
 [tools]
-bun = "latest"
-deno = "latest"
 dotnet = "latest" # Newest GA release, STS or LTS: always eager
 go = "latest"
-java = "temurin-21"
+java = "temurin-25" # Latest LTS (next: 29, Sept 2027)
 node = "lts"
 pnpm = "latest"
 python = "3.14"

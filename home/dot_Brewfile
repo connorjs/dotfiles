@@ -44,9 +44,7 @@ cask "rocket" # Settings: :: as trigger
 # macOS App Store (sign in to the App Store first)
 brew "mas"
 mas "1Password for Safari", id: 1569813296
-mas "Clocker", id: 1056643111
 mas "Dark Reader for Safari", id: 1438243180
 mas "Endel", id: 1484348796
-mas "Live Home 3D Pro: Design House", id: 1066145115
 mas "Magnet", id: 441258766
 mas "Speedtest by Ookla", id: 1153157709
