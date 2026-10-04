@@ -18,11 +18,14 @@ A ground-up reset for macOS only (home and work).
 - Replace kitty with [Ghostty](https://ghostty.org), using its built-in light/dark themes.
 - Add `./test.sh` to validate the repo without touching `~`.
 - Strip Neovim down to a plain editor: options only, no plugins.
-- Make mise the only runtime manager (replaces fnm and direnv), including .NET (always the latest release). Drops Ruby.
+- Make mise the only runtime manager (replaces fnm and direnv), including .NET (always the latest release), Java 25 (Temurin LTS), and the Aspire CLI. Drops Ruby, Bun, and Deno.
 - Move fish universal variables (PATH, telemetry opt-outs) into a tracked, machine-agnostic `config.fish`.
 - Move git ignore and attributes to `~/.config/git/`, and track the full `.gitconfig`.
 - Add `fd`, `fzf`, `zoxide`, `uv`, PowerShell 7, tilt, and other daily CLI tools to the Brewfile.
 - Set TextEdit's plain-text font to JetBrains Mono NFM 18.
+- Replace Magnet with [Rectangle](https://rectangleapp.com).
+- Replace Prettier with [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html) as the global formatter.
+- delta follows the terminal's light/dark mode itself, with one ANSI syntax theme.
 
 ### Removed
 

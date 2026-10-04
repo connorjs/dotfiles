@@ -7,7 +7,6 @@ fish_add_path --global \
 	~/.local/bin \
 	~/.cargo/bin \
 	~/.dotnet/tools \
-	~/.aspire/bin \
 	/opt/homebrew/opt/curl/bin
 
 set -gx DOTNET_CLI_TELEMETRY_OPTOUT 1
@@ -28,7 +27,6 @@ if status is-interactive
 	tabs -3
 
 	abbr -a n nvim
-	abbr -a d pushd
 	abbr -a pn pnpm
 	abbr -a cm chezmoi
 

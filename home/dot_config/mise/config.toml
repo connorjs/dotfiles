@@ -3,6 +3,7 @@
 # need to adopt mise. Personal per-project pins go in a git-ignored mise.local.toml.
 
 [tools]
+aspire = "latest" # Aspire CLI (github:microsoft/aspire)
 dotnet = "latest" # Newest GA release, STS or LTS: always eager
 go = "latest"
 java = "temurin-25" # Latest LTS (next: 29, Sept 2027)
@@ -11,4 +12,4 @@ pnpm = "latest"
 python = "3.14"
 
 [settings]
-idiomatic_version_file_enable_tools = ["dotnet", "node", "python"]
+idiomatic_version_file_enable_tools = ["dotnet", "java", "node", "pnpm", "python"]

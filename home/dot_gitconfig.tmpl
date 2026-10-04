@@ -20,8 +20,7 @@
 [core]
 	autocrlf = input
 	editor = nvim
-	# https://github.com/dandavison/delta/issues/447#issuecomment-1239398586
-	pager = delta --features "$(defaults read -globalDomain AppleInterfaceStyle > /dev/null 2>&1 && echo dark || echo light)"
+	pager = delta
 
 [interactive]
 	diffFilter = delta --color-only
@@ -54,11 +53,5 @@
 	navigate = true # use n and N to move between diff sections
 	side-by-side = false
 	tabs = 3
-
-[delta "light"]
-	light = true
-	syntax-theme = GitHub
-
-[delta "dark"]
-	light = false
+	# ANSI colors follow the terminal palette; delta (0.18+) detects light/dark from the terminal itself
 	syntax-theme = ansi

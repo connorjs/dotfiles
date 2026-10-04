@@ -90,5 +90,4 @@ Out of scope for the 2026-10 reset. ⭐ = strongly recommended.
 - **Neovim, step 3:** native LSP (`vim.lsp.config` / `vim.lsp.enable`, no plugins) once plain editing feels natural.
 - **Practice vim motions everywhere:** `fish_vi_key_bindings` in the shell, IdeaVim in JetBrains (track `~/.ideavimrc`).
 - **Starship transient prompt:** collapse previous prompts to `❯` to keep scrollback clean (`enable_transience` in fish).
-- **delta light/dark:** recent delta detects the terminal background itself; try dropping the `defaults read` workaround in `.gitconfig`.
 - **Ghostty quick terminal:** a global hotkey (`keybind = global:…=toggle_quick_terminal`) for a drop-down terminal.

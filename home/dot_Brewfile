@@ -39,6 +39,7 @@ cask "alfred"
 cask "flux-app" # Settings: Halogen, Tungsten, Candle
 cask "ghostty"
 cask "jetbrains-toolbox"
+cask "rectangle"
 cask "rocket" # Settings: :: as trigger
 
 # macOS App Store (sign in to the App Store first)
@@ -46,5 +47,4 @@ brew "mas"
 mas "1Password for Safari", id: 1569813296
 mas "Dark Reader for Safari", id: 1438243180
 mas "Endel", id: 1484348796
-mas "Magnet", id: 441258766
 mas "Speedtest by Ookla", id: 1153157709
