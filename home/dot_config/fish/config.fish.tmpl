@@ -14,10 +14,13 @@ set -gx TESTINGPLATFORM_TELEMETRY_OPTOUT 1
 set -gx HOMEBREW_NO_AUTO_UPDATE 1
 set -gx FORCE_COLOR 1
 set -gx FORCE_HYPERLINK 1
-{{- if .work }}
+{{- if .corporateCa }}
+{{- $ca := regexReplaceAll "^~" .corporateCa .chezmoi.homeDir }}
 
-# Work: corporate CA (additive to Node's bundled CAs)
-set -gx NODE_EXTRA_CA_CERTS ~/certs/tql.pem
+# Corporate CA (additive to Node's bundled CAs); skipped until the file exists
+if test -f {{ $ca | quote }}
+	set -gx NODE_EXTRA_CA_CERTS {{ $ca | quote }}
+end
 {{- end }}
 
 set -gx VISUAL nvim

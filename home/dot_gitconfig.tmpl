@@ -1,7 +1,7 @@
 [user]
 	name = {{ .name }}
 	email = {{ .email }}
-{{- if not .work }}
+{{- if .signCommits }}
 	signingKey = ~/.ssh/github-commits.pub
 
 [gpg]

@@ -20,7 +20,7 @@ macOS at home and at work. One [chezmoi][chezmoi] repo.
    chezmoi init --apply --source ~/w/connorjs/dotfiles connorjs
    ```
 
-   It asks three questions once (work machine? git name? git email?), then:
+   It asks four questions once (sign commits? corporate CA path? git name? git email?), then:
 
    - installs everything in the [Brewfile](home/dot_Brewfile),
    - writes the dotfiles,
@@ -32,7 +32,7 @@ macOS at home and at work. One [chezmoi][chezmoi] repo.
    - JetBrains Toolbox: sign in, then turn on **Backup and Sync** (IDE settings live there, not here).
    - Rider: set the .NET CLI to `$DOTNET_ROOT/dotnet` (GUI apps do not see the shell's mise environment).
    - Vite+: run `vp env off` so mise owns Node.
-   - Work: put the corporate CA at `~/certs/tql.pem`.
+   - Work: put the corporate CA at the path you gave chezmoi (e.g. `~/certs/tql.pem`).
    - Alfred, Rocket, and Flux settings (see the Brewfile comments).
 
 ## Day to day
@@ -55,7 +55,7 @@ The Brewfile, mise config, and macOS defaults re-run automatically when they cha
 
 | Path                            | What                                                             |
 | ------------------------------- | ---------------------------------------------------------------- |
-| `home/.chezmoi.toml.tmpl`       | Per-machine data: `work`, `name`, `email`                        |
+| `home/.chezmoi.toml.tmpl`       | Per-machine data: `signCommits`, `corporateCa`, `name`, `email`  |
 | `home/.chezmoiscripts/`         | Brew bundle, login shell, `mise install`, macOS defaults         |
 | `home/.chezmoiremove`           | Old files to delete (stow-era symlinks, kitty, Karabiner)        |
 | `home/dot_Brewfile`             | CLI tools and apps (no language runtimes)                        |
@@ -64,11 +64,11 @@ The Brewfile, mise config, and macOS defaults re-run automatically when they cha
 | `home/dot_config/mise/`         | Global runtime versions                                          |
 | `home/dot_config/nvim/`         | Plain Neovim, no plugins                                         |
 | `home/dot_config/starship.toml` | Prompt                                                           |
-| `home/dot_gitconfig.tmpl`       | git (commit signing only at home)                                |
+| `home/dot_gitconfig.tmpl`       | git (commit signing when `signCommits`)                          |
 
 ## Machine differences
 
-- **Templates:** `{{ if .work }}` in any `.tmpl` file. The answers live in `~/.config/chezmoi/chezmoi.toml`. Run `chezmoi init` again to change them.
+- **Templates:** one setting per behavior, not a machine type: `{{ if .signCommits }}` and `{{ if .corporateCa }}` in any `.tmpl` file. A new machine (edu, a new job) is new answers, not template edits. The answers live in `~/.config/chezmoi/chezmoi.toml`. Run `chezmoi init` again to change them.
 - **Untracked overrides:** `~/.config/fish/local.fish` for anything one machine needs that should not be committed.
 - **Per-project versions:** mise reads the version files a repo already has (`.nvmrc`, `.node-version`, `global.json`, `.python-version`, …). For a personal pin, use `mise.local.toml`. The global git ignore keeps it out of commits.
 

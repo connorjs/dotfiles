@@ -11,7 +11,7 @@ A ground-up reset for macOS only (home and work).
 ### Changed
 
 - Replace stow and the install scripts with [chezmoi](https://www.chezmoi.io).
-  - Templates for work vs. home (git email, commit signing, corporate CA).
+  - Per-machine settings instead of a work/home switch: git name and email, commit signing, corporate CA path.
   - The Brewfile, `mise install`, and macOS defaults re-run automatically when they change.
   - `.chezmoiremove` cleans up the stow-era symlinks.
 - Replace Oh My Posh with [Starship](https://starship.rs), ported from the old theme.
